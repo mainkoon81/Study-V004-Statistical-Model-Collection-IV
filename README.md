@@ -27,10 +27,10 @@ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**
    - Given `X` = {x1,x2,...xn} 
    - Given `Z` is **latent** variable(never observed)
    - Joint `X, Z` ~ some distribution(exponential family) with unknown θ
- - First Goal: <img src="https://user-images.githubusercontent.com/31917400/66665785-25a64e80-ec47-11e9-91c2-924afe6ede25.jpg" />
+ - Problem: <img src="https://user-images.githubusercontent.com/31917400/66665785-25a64e80-ec47-11e9-91c2-924afe6ede25.jpg" />
  
    - But the issue here is that maximizing the marginal of X is difficult coz the joint distribution can be "multimodal"!!! 
-   - EM can address this by iteratively improving our parameter estimate.
+ - EM can address this by iteratively improving our parameter estimate.
      - 1> Initialize θ_knot 
        - give the initial values...whatever..
      - 2> For t=0,1,2,... **E-Step** 
