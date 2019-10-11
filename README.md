@@ -20,7 +20,28 @@ How we might use hierarchical modeling to extend a linear model?
 
 
 
-# 3> Latent Variable Models
+# Latent Variable Models
+### General form of EM-Algorithm
+This is an algorithm to drive other algorithms for obtaining MLE/MAP of θ **`when some data is missing`**(or data is latent variables). When the likelihood(data) is a member of Exponential family, it is particularly applicable. For example, HMM(Hidden Markov) for ?, or GMM(Gaussian Mixture) for clustering?
+ - Setting:
+   - Given `X` = {x1,x2,...xn} 
+   - Given `Z` is **latent** variable(never observed)
+   - Joint `X, Z` ~ some distribution(exponential family) with unknown θ
+ - First Goal: <img src="https://user-images.githubusercontent.com/31917400/66665157-df9cbb00-ec45-11e9-9dc3-ee45db3e8906.jpg" />
+ 
+   - But the issue here is that maximizing the marginal of X is difficult coz the joint distribution can be "multimodal"!!! 
+
+
+
+
+
+
+
+
+
+
+
+### Latent Variable
 Latent variable is just a random variable which is unobservable to you nor in training nor in test phase. This is the variable you can't just measure with some quantitative scale. 
 <img src="https://user-images.githubusercontent.com/31917400/48974117-ebd85380-f046-11e8-913b-f788ec6bf63f.jpg" />
 
@@ -50,7 +71,7 @@ We introduce a latent variable.
  - We can treat `missing values` as **latent variables** and still estimate the Gaussian parameters. But with one-dimensional data, if a data point has missing values, it means that we don’t know anything about it (its only dimension is missing), so the only thing that is left is to throw away points with missing data.
  - Note that we also don’t need EM to estimate the mean vector (e.i. we need it only for the covariance matrix) in the multi-dimensional case: since each coordinate of the mean vector can be treated independently, we can treat each coordinate as one-dimensional case and just throw away missing values. 
 
-### General form of EM-Algorithm
+
 
 
 
