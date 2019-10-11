@@ -27,10 +27,19 @@ This is an algorithm to drive other algorithms for obtaining MLE/MAP of θ **`wh
    - Given `X` = {x1,x2,...xn} 
    - Given `Z` is **latent** variable(never observed)
    - Joint `X, Z` ~ some distribution(exponential family) with unknown θ
- - First Goal: <img src="https://user-images.githubusercontent.com/31917400/66665157-df9cbb00-ec45-11e9-9dc3-ee45db3e8906.jpg" />
+ - First Goal: <img src="https://user-images.githubusercontent.com/31917400/66665785-25a64e80-ec47-11e9-91c2-924afe6ede25.jpg" />
  
    - But the issue here is that maximizing the marginal of X is difficult coz the joint distribution can be "multimodal"!!! 
-
+   - EM can address this by iteratively improving our parameter estimate.
+     - 1> Initialize θ_knot 
+       - give the initial values...whatever..
+     - 2> For t=0,1,2,... **E-Step** 
+       - Get the Q function by computing the **Conditional Expectation** of the log(joint distribution) under current θ and from simply feeding current data.
+       <img src="https://user-images.githubusercontent.com/31917400/66671143-542a2680-ec53-11e9-886e-87dbaedf6adf.jpg" />
+   
+     - 3> For t=... until convergence... **M-Step**
+       - Get the maximizer and update...   
+       <img src="https://user-images.githubusercontent.com/31917400/66669310-12977c80-ec4f-11e9-958f-4611321128ca.jpg" />
 
 
 
