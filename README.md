@@ -52,20 +52,20 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
  - EM can address this by iteratively improving our parameter estimate.
  <img src="https://user-images.githubusercontent.com/31917400/66708635-8a4ad180-ed4b-11e9-9d6e-1cbbc87baf30.jpg" />
  
-     - 1> Initialize θ_knot 
-       - give the initial values...whatever..
-     - 2> For t=0,1,2,... **E-Step** 
-       - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) under current θ and from simply feeding current data, and b) estimating next parameters. 
+   - 1> Initialize θ_knot 
+     - give the initial values...whatever..
+   - 2> For t=0,1,2,... **E-Step** 
+     - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) under current θ and from simply feeding current data, and b) estimating next parameters. 
        
-       a)
-       <img src="https://user-images.githubusercontent.com/31917400/66671143-542a2680-ec53-11e9-886e-87dbaedf6adf.jpg" />
+     a)
+     <img src="https://user-images.githubusercontent.com/31917400/66671143-542a2680-ec53-11e9-886e-87dbaedf6adf.jpg" />
+     
+     b) for example..
+     <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
        
-       b) for example..
-       <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
-       
-     - 3> For t=... don't stop until convergence... **M-Step**
-       - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
-       <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
+   - 3> For t=... don't stop until convergence... **M-Step**
+     - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
+     <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
 
 __Example:__ 
 > 1. Let's say, several datasets were hacked and mixed up..How to retrieve the originals? The assumption is each dataset follows a certain statistical distribution....perhaps Gaussian.  
