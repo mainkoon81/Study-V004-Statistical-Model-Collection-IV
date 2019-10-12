@@ -22,7 +22,7 @@ How we might use hierarchical modeling to extend a linear model?
 
 # Latent Variable Models
 ### General form of EM-Algorithm
-This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**(or data is latent variables). When the likelihood(data) is a member of Exponential family, it is particularly applicable. For example, HMM(Hidden Markov) for ?, or GMM(Gaussian Mixture) for clustering?
+This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**(or data is latent variables). When the likelihood(data) is a member of Exponential family, it is particularly applicable. For example, HMM(Hidden Markov) for ?, or GMM(Gaussian Mixture) for clustering? so it's a point estimate at the end? 
  - Setting:
    - Given `X` = {x1,x2,...xn} 
    - Given `Z` is **latent** variable(never observed)
