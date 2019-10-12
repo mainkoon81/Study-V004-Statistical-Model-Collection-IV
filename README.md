@@ -40,7 +40,7 @@ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**
        <img src="https://user-images.githubusercontent.com/31917400/66671143-542a2680-ec53-11e9-886e-87dbaedf6adf.jpg" />
        
        b) for example..
-       <img src="https://user-images.githubusercontent.com/31917400/66701072-d536fb80-ecef-11e9-81e9-09e26472f107.jpg" />
+       <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
        
      - 3> For t=... don't stop until convergence... **M-Step**
        - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
