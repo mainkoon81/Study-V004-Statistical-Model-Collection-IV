@@ -35,7 +35,11 @@ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**
        - give the initial values...whatever..
      - 2> For t=0,1,2,... **E-Step** 
        - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) under current θ and from simply feeding current data, and b) estimating next parameters. 
+       
+       a)
        <img src="https://user-images.githubusercontent.com/31917400/66671143-542a2680-ec53-11e9-886e-87dbaedf6adf.jpg" />
+       
+       b)
        <img src="https://user-images.githubusercontent.com/31917400/66701072-d536fb80-ecef-11e9-81e9-09e26472f107.jpg" />
        
      - 3> For t=... don't stop until convergence... **M-Step**
