@@ -21,8 +21,24 @@ How we might use hierarchical modeling to extend a linear model?
 
 
 # Latent Variable Model
-### A. General form of EM-Algorithm
-This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**(or data is latent variables). When the likelihood(data) is a member of Exponential family, it is particularly applicable. For example, HMM(Hidden Markov) for ?, or GMM(Gaussian Mixture) for clustering? so it's a point estimate at the end? 
+### What is Latent Variable?
+Latent variable is just a random variable which is unobservable to you nor in training nor in test phase. This is the variable you can't just measure with some quantitative scale. 
+<img src="https://user-images.githubusercontent.com/31917400/48974117-ebd85380-f046-11e8-913b-f788ec6bf63f.jpg" />
+
+> __[Note]:__  
+ - Latent variable can make things **easily interpretable** as we, for example, can estimate his intelligence on the scale from one to 100 although you don't know what the "scale" means. However, you can compare each data point according to this scale. Training latent variable model relies on a lot math.
+ - Sometimes adding latent variables **restrict(overly simplify) your model** too much. If, for example, a student is doing 2 tests in the same day, it doesn’t make sense to assume that these two grades are caused only by his intelligence and doesn’t influence each other directly. Even if we know that he is very smart, if he failed the first test he is more likely to fail the second one because he may have a headache or maybe he didn’t have time to prepare the day before.
+
+## Latent Variable Modeling_01> Probabilistic Clustering with GMM
+__Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each data point we assign its **membership**. But sometimes, people do soft clustering. So instead of assigning each data point a particular membership, we will assign each data point from **probability** distributions over clusters(for example, 40% probability to belong to the A_cluster, and 60% probability to belong to the B_cluster, and 0% to the C_cluster). That is, instead of just assigning each data point a particular cluster, we assume that each data point belongs to every cluster, but with some **different probabilities**: `P(cluster_idx|x)` instead of `cluster_idx = f(x)`. Whyyyyy?  
+ - 1. For handling **missing data**
+ - 2. For tunning **hyperparameters**(meta-parameters...it can be the No.of clusters of course)
+ <img src="https://user-images.githubusercontent.com/31917400/51439273-b69b5b00-1caf-11e9-99ee-a39f00c652bc.jpg" /> 
+ 
+ - 3. For building a **generative model** of our data.. treating everything probabilistically, we may sample new data points from our model of the data.
+
+### A. Soft Clustering with EM-Algorithm
+__General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**(or data is latent variables). When the likelihood(data) is a member of Exponential family, it is particularly applicable. For example, HMM(Hidden Markov) for ?, or GMM(Gaussian Mixture) for clustering? so it's a point estimate at the end? 
  - Setting:
    - Given `X` = {x1,x2,...xn} 
    - Given `Z` is **latent** variable(never observed)
@@ -46,24 +62,7 @@ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**
        - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
        <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
 
-### B. What is Latent Variable?
-Latent variable is just a random variable which is unobservable to you nor in training nor in test phase. This is the variable you can't just measure with some quantitative scale. 
-<img src="https://user-images.githubusercontent.com/31917400/48974117-ebd85380-f046-11e8-913b-f788ec6bf63f.jpg" />
-
-> __[Note]:__  
- - Latent variable can make things **easily interpretable** as we, for example, can estimate his intelligence on the scale from one to 100 although you don't know what the "scale" means. However, you can compare each data point according to this scale. Training latent variable model relies on a lot math.
- - Sometimes adding latent variables **restrict(overly simplify) your model** too much. If, for example, a student is doing 2 tests in the same day, it doesn’t make sense to assume that these two grades are caused only by his intelligence and doesn’t influence each other directly. Even if we know that he is very smart, if he failed the first test he is more likely to fail the second one because he may have a headache or maybe he didn’t have time to prepare the day before.
-
-## Latent Variable Modeling_01> Probabilistic Clustering with GMM
-__Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each data point we assign its **membership**. But sometimes, people do soft clustering. So instead of assigning each data point a particular membership, we will assign each data point from **probability** distributions over clusters(for example, 40% probability to belong to the A_cluster, and 60% probability to belong to the B_cluster, and 0% to the C_cluster). That is, instead of just assigning each data point a particular cluster, we assume that each data point belongs to every cluster, but with some **different probabilities**: `P(cluster_idx|x)` instead of `cluster_idx = f(x)`. Whyyyyy?  
- - 1. For handling **missing data**
- - 2. For tunning **hyperparameters**(meta-parameters...it can be the No.of clusters of course)
- <img src="https://user-images.githubusercontent.com/31917400/51439273-b69b5b00-1caf-11e9-99ee-a39f00c652bc.jpg" /> 
- 
- - 3. For building a **generative model** of our data.. treating everything probabilistically, we may sample new data points from our model of the data.
-
-### Soft Clustering with EM
-Wow, several datasets were hacked and mixed up..How to retrieve the originals?
+__Example:__ Wow, several datasets were hacked and mixed up..How to retrieve the originals?
  - [Assumption]: Each cluster follows a certain statistical distribution
 
 
@@ -76,13 +75,13 @@ Wow, several datasets were hacked and mixed up..How to retrieve the originals?
 
 
 
-### Soft Clustering with Latent Variable
+### B. Soft Clustering with Latent Variable
 Gaussian Mixture Model: 
  - **How to fit it?**(How to find the model parameters?) 
    - The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
  <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
 
- - What if we introduce a latent variable?
+ - **What if we introduce a latent variable?**
 <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
 [Note]: 
