@@ -39,7 +39,7 @@ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**
        a)
        <img src="https://user-images.githubusercontent.com/31917400/66671143-542a2680-ec53-11e9-886e-87dbaedf6adf.jpg" />
        
-       b)
+       b) for example..
        <img src="https://user-images.githubusercontent.com/31917400/66701072-d536fb80-ecef-11e9-81e9-09e26472f107.jpg" />
        
      - 3> For t=... don't stop until convergence... **M-Step**
