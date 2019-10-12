@@ -62,12 +62,27 @@ __Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each 
  
  - 3. For building a **generative model** of our data.. treating everything probabilistically, we may sample new data points from our model of the data.
 
-### So let's do Soft Clustering!
-> __GMM__ Gaussian Mixture Model: **How to fit it? How to find the model parameters?** 
-The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
-<img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
+### Soft Clustering with EM
+Wow, several datasets were hacked and mixed up..How to retrieve the originals?
+ - [Assumption]: Each cluster follows a certain statistical distribution
 
-We introduce a latent variable.
+
+
+
+
+
+
+
+
+
+
+### Soft Clustering with Latent Variable
+Gaussian Mixture Model: 
+ - **How to fit it?**(How to find the model parameters?) 
+   - The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
+ <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
+
+ - What if we introduce a latent variable?
 <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
 [Note]: 
