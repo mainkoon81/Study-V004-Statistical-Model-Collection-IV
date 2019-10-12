@@ -39,6 +39,7 @@ __Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each 
  <img src="https://user-images.githubusercontent.com/31917400/51439273-b69b5b00-1caf-11e9-99ee-a39f00c652bc.jpg" /> 
  
  - 3. For building a **generative model** of our data.. treating everything probabilistically, we may sample new data points from our model of the data.
+<img src="https://user-images.githubusercontent.com/31917400/66708952-e7498600-ed51-11e9-92f3-76cf13262721.jpg" />
 
 ### A. Gaussian Mixture Model: Soft Clustering with EM-Algorithm
 __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**(or data is latent variables). When the likelihood(data) is a member of Exponential family, it is particularly applicable. For example, HMM(Hidden Markov) for ?, or GMM(Gaussian Mixture) for clustering? so it's a point estimate at the end? 
