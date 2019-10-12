@@ -44,7 +44,7 @@ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**
        
      - 3> For t=... don't stop until convergence... **M-Step**
        - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
-       <img src="https://user-images.githubusercontent.com/31917400/66701238-ff89b880-ecf1-11e9-8a04-2075f28f19ab.jpg" />
+       <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
 
 
 
