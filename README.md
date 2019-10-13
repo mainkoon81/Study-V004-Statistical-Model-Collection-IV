@@ -92,8 +92,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 # 3> For t=... don't stop until convergence... **M-Step**
  <img src="https://user-images.githubusercontent.com/31917400/66709385-00a30000-ed5b-11e9-88d4-4ad9068c38e8.jpg" /> 
 
- - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model by Evaluating the log-likelihood which sums for all clusters(Computes parameters maximizing the expected log-likelihood found on the E step). 
- - The higher the value, the more sure we are that the mixer model fits out dataset. The purpose is to maximize this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum.
+ - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model by **`Evaluating the log-likelihood which sums for all clusters`**(Computes parameters maximizing the expected log-likelihood found on the E step). The higher the value, the more sure we are that the mixer model fits out dataset. The purpose is to maximize this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum.
  - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
  <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
  <img src="https://user-images.githubusercontent.com/31917400/66720651-aa37cf00-edf7-11e9-8b3f-226d1cb62357.jpg" /> 
