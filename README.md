@@ -72,7 +72,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 ## Q-function: E[log(**`P(joint)`**)|data] : 
 
  - 1> Define how many `K`(cluster) we have, and Initialize `θ_knot`.
-   - give the initial values...whatever..
+   - give the initial values...whatever..(mu,var,mixing prob)
    
  - 2> For t=0,1,2,... **E-Step**
  <img src="https://user-images.githubusercontent.com/31917400/66709368-68a51680-ed5a-11e9-9983-c0184a9ac06f.jpg" /> 
@@ -85,6 +85,17 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
      
    b) for example..
    <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
        
  - 3> For t=... don't stop until convergence... **M-Step**
  <img src="https://user-images.githubusercontent.com/31917400/66709385-00a30000-ed5b-11e9-88d4-4ad9068c38e8.jpg" /> 
