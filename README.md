@@ -69,7 +69,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 ## EM can address this by iteratively improving our parameter estimate.
 <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
 
-Q-function... E[log(**P(joint)**)|data]
+# Q-function: E[log(**P(joint)**)|data]
 
 
 
