@@ -73,7 +73,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
      <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
        
    - 3> For t=... don't stop until convergence... **M-Step**
-   <img src="https://user-images.githubusercontent.com/31917400/66709369-6b077080-ed5a-11e9-8081-e112614af53c.jpg" /> 
+   <img src="https://user-images.githubusercontent.com/31917400/66709385-00a30000-ed5b-11e9-88d4-4ad9068c38e8.jpg" /> 
 
      - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model (Computes parameters maximizing the expected log-likelihood found on the E step).
      - Assuming **weight** is a prior, it re-estimate the parameter values given the current posterior.
