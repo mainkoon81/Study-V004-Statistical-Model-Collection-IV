@@ -61,7 +61,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
    - Given `X` is our data variable = {x1,x2,...xn} 
    - Given `Z` is **latent** variable (memberships) = {vector, vector, ...}
    - Joint `X, Z` likelihood ~ some distribution(exponential family) with unknown θ
- - Problem: <img src="https://user-images.githubusercontent.com/31917400/66665785-25a64e80-ec47-11e9-91c2-924afe6ede25.jpg" />
+ - Problem: <img src="https://user-images.githubusercontent.com/31917400/66717151-bd35a980-edcd-11e9-967a-ecb42f9ff7fe.jpg" />
  
    - But the issue here is that `maximizing the marginal of X is difficult coz the joint distribution can be "multimodal"`!!! 
    
