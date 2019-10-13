@@ -56,8 +56,6 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
  
    - But the issue here is that `maximizing the marginal of X is difficult coz the joint distribution can be "multimodal"`!!! 
  - **EM can address this by iteratively improving our parameter estimate.**
- <img src="https://user-images.githubusercontent.com/31917400/66708635-8a4ad180-ed4b-11e9-9d6e-1cbbc87baf30.jpg" />
-
    - 1> Initialize θ_knot 
      - give the initial values...whatever..
    - 2> For t=0,1,2,... **E-Step**
