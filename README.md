@@ -27,7 +27,7 @@ Latent variable is just a random variable which is unobservable to you nor in tr
 
 > __[Note]:__  
  - `Latent variable` acting like a **parameter**, can make things interpretable as we, for example, can estimate his intelligence on the scale from 1 to 100 although you don't know what the "scale" means. However, you can compare each data point according to this scale because **`it gives weights`**!
- - Sometimes adding latent variables **restrict(overly simplify) your model** too much. If, for example, a student is doing 2 tests in the same day, it doesn’t make sense to assume that these two grades are caused only by his intelligence and doesn’t influence each other directly. Even if we know that he is very smart, if he failed the first test he is more likely to fail the second one because he may have a headache or maybe he didn’t have time to prepare the day before.
+> Sometimes adding latent variables **restrict(overly simplify) your model** too much. If, for example, a student is doing 2 tests in the same day, it doesn’t make sense to assume that these two grades are caused only by his intelligence and doesn’t influence each other directly. Even if we know that he is very smart, if he failed the first test he is more likely to fail the second one because he may have a headache or maybe he didn’t have time to prepare the day before.
 
 ## Latent Variable Modeling_01> Probabilistic Clustering with GMM
 > 1. Let's say, several datasets were hacked and mixed up..How to retrieve the originals? The assumption is each dataset follows a certain statistical distribution....perhaps Gaussian.  
