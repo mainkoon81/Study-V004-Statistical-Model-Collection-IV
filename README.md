@@ -96,6 +96,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
  - The higher the value, the more sure we are that the mixer model fits out dataset. The purpose is to maximize this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum.
  - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
  <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/66720651-aa37cf00-edf7-11e9-8b3f-226d1cb62357.jpg" /> 
 
  - **What's happening if we introduce a latent variable?**
  <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
