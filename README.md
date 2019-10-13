@@ -71,8 +71,8 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 
 ### Q-function: E[log(**`P(joint)`**)|data] : objective function
 
-## 1> Define how many `K`(cluster) we have, and Initialize `θ_knot`.
-   - give the initial values...whatever..(mu,var)..the weight parameter(mixing proportion) naturally comes from these mu,var parameters.
+## 1> Define how many `K`(cluster) we have, then initialize `θ_knot`.
+ - give the initial values...whatever..(mu,var)..the weight parameter(mixing proportion) naturally comes from these mu,var parameters.
    
 ## 2> For t=0,1,2,... **E-Step**
  <img src="https://user-images.githubusercontent.com/31917400/66709368-68a51680-ed5a-11e9-9983-c0184a9ac06f.jpg" /> 
