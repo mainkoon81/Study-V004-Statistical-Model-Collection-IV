@@ -75,10 +75,8 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
  - give the initial values...whatever..(mu,var)..the weight parameter(mixing proportion) naturally comes from these mu,var parameters.
    
 ## 2> For t=0,1,2,... **E-Step**
- <img src="https://user-images.githubusercontent.com/31917400/66720104-71482c00-edf0-11e9-9768-35fd152aea12.jpg" /> 
-
-   - Estimate the distribution of the variable and **hidden variable** P(X,Z) given the data + current parameters (create function for the expectation of the log-likelihood).
-   - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) by simply feeding current θ and data, and b) estimating next parameters. 
+ - Estimate the distribution of the variable and **hidden variable** P(X,Z) given the data + current parameters (create function for the expectation of the log-likelihood).
+ - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) by simply feeding current θ and data, and b) estimating next parameters. 
        
    a)
    <img src="https://user-images.githubusercontent.com/31917400/66671143-542a2680-ec53-11e9-886e-87dbaedf6adf.jpg" />
@@ -86,8 +84,10 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
    b) for example..
    <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
    
-   
-   
+ - 1. Find `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720104-71482c00-edf0-11e9-9768-35fd152aea12.jpg" /> 
+ 
+ - 2. Update other parameters using `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720432-86bf5500-edf4-11e9-89f2-2fbee28d4805.jpg" />  
+ 
    
    
    
