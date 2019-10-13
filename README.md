@@ -49,13 +49,19 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
    - Joint `X, Z` likelihood ~ some distribution(exponential family) with unknown θ
  - Problem: <img src="https://user-images.githubusercontent.com/31917400/66665785-25a64e80-ec47-11e9-91c2-924afe6ede25.jpg" />
  
-   - But the issue here is that maximizing the marginal of X is difficult coz the joint distribution can be "multimodal"!!! 
- - EM can address this by iteratively improving our parameter estimate.
+   - But the issue here is that `maximizing the marginal of X is difficult coz the joint distribution can be "multimodal"`!!! 
+ - **EM can address this by iteratively improving our parameter estimate.**
  <img src="https://user-images.githubusercontent.com/31917400/66708635-8a4ad180-ed4b-11e9-9d6e-1cbbc87baf30.jpg" />
+ 
+ - Introduce a **hidden variable** such that its knowledge would simplify the maximization of the likelihood. 
+ - **How to fit it?**(How to find the model parameters?) 
+   - The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
+ <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
  
    - 1> Initialize θ_knot 
      - give the initial values...whatever..
-   - 2> For t=0,1,2,... **E-Step** 
+   - 2> For t=0,1,2,... **E-Step**
+     - Estimate the distribution of the **hidden variable** given the data + current parameters.   
      - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) under current θ and from simply feeding current data, and b) estimating next parameters. 
        
      a)
@@ -65,6 +71,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
      <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
        
    - 3> For t=... don't stop until convergence... **M-Step**
+     - Maximize the joint distribution of the data and the hidden variable. 
      - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
      <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
 
@@ -84,10 +91,7 @@ __Example:__
 
 
 
-### B. Gaussian Mixture Model: Soft Clustering with Latent Variable
- - **How to fit it?**(How to find the model parameters?) 
-   - The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
- <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
+
 
  - **What if we introduce a latent variable?**
 <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
