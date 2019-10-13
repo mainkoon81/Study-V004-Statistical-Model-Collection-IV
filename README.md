@@ -59,7 +59,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
  - Give weight(it's not a prior) to variable & hidden variable. 
  - Setting:
    - Given `X` = {x1,x2,...xn} (our data)
-   - Given `Z` is **latent** variable (memberships)
+   - Given `Z` is **latent** variable (memberships) = {vector, vector, ...}
    - Joint `X, Z` likelihood ~ some distribution(exponential family) with unknown θ
  - Problem: <img src="https://user-images.githubusercontent.com/31917400/66665785-25a64e80-ec47-11e9-91c2-924afe6ede25.jpg" />
  
