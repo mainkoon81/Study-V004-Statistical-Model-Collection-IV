@@ -71,10 +71,10 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 
 ### Q-function: E[log(**`P(joint)`**)|data] : objective function
 
-## 1> Define how many `K`(cluster) we have, then initialize `θ_knot`.
+# 1> Define how many `K`(cluster) we have, then initialize `θ_knot`.
  - give the initial values...whatever..(mu,var)..the weight parameter(mixing proportion) naturally comes from these mu,var parameters.
    
-## 2> For t=0,1,2,... **E-Step**
+# 2> For t=0,1,2,... **E-Step**
  - Estimate the distribution of the variable and **hidden variable** P(X,Z) given the data + current parameters (create function for the expectation of the log-likelihood).
  - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) by simply feeding current θ and data, and b) estimating next parameters. 
        
@@ -89,40 +89,16 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 ## b. Update other parameters using `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720432-86bf5500-edf4-11e9-89f2-2fbee28d4805.jpg" />  
  
    
-   
-   
-   
-   
-   
-   
-   
-       
-## 3> For t=... don't stop until convergence... **M-Step**
+# 3> For t=... don't stop until convergence... **M-Step**
  <img src="https://user-images.githubusercontent.com/31917400/66709385-00a30000-ed5b-11e9-88d4-4ad9068c38e8.jpg" /> 
 
-   - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model (Computes parameters maximizing the expected log-likelihood found on the E step).
-   - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
-   <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model by Evaluating the log-likelihood which sums for all clusters(Computes parameters maximizing the expected log-likelihood found on the E step). 
+ - The higher the value, the more sure we are that the mixer model fits out dataset. The purpose is to maximize this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum.
+ - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
+ <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
 
  - **What's happening if we introduce a latent variable?**
-<img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
+ <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
 [Note]: 
  - When choosing the best run (highest training log-likelihood) among several training attempts with different random initializations, we can suffer from **local maxima**. and its solution would be **NP-Hard**. 
