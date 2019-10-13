@@ -60,6 +60,8 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
    - 1> Initialize θ_knot 
      - give the initial values...whatever..
    - 2> For t=0,1,2,... **E-Step**
+   <img src="https://user-images.githubusercontent.com/31917400/66709368-68a51680-ed5a-11e9-9983-c0184a9ac06f.jpg" /> 
+
      - Estimate the distribution of the data and **hidden variable** given the data + current parameters (create function for the expectation of the log-likelihood).
      - Assuming **weight** is a prior, it finds the **posterior of the latent variable** given current parameter values. 
      - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) under current θ and from simply feeding current data, and b) estimating next parameters. 
@@ -71,6 +73,8 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
      <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
        
    - 3> For t=... don't stop until convergence... **M-Step**
+   <img src="https://user-images.githubusercontent.com/31917400/66709369-6b077080-ed5a-11e9-8081-e112614af53c.jpg" /> 
+
      - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model (Computes parameters maximizing the expected log-likelihood found on the E step).
      - Assuming **weight** is a prior, it re-estimate the parameter values given the current posterior.
      - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
