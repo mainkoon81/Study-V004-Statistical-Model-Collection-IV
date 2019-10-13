@@ -60,7 +60,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
    - 1> Initialize θ_knot 
      - give the initial values...whatever..
    - 2> For t=0,1,2,... **E-Step**
-     - Estimate the distribution of the **hidden variable** given the data + current parameters. In other words, given the current parameters of the model, estimate a probability distribution (create function for the expectation of the log-likelihood)
+     - Estimate the distribution of the data and **hidden variable** given the data + current parameters (create function for the expectation of the log-likelihood).
      - Assuming **weight** is a prior, it finds the **posterior of the latent variable** given current parameter values. 
      - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) under current θ and from simply feeding current data, and b) estimating next parameters. 
        
