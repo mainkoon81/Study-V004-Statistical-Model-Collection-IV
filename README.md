@@ -56,8 +56,10 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
  - The weight(it's another parameter) comes from the **joint** over **marginal**.
  <img src="https://user-images.githubusercontent.com/31917400/66720528-b15ddd80-edf5-11e9-9deb-904c8db6fe6d.jpg" />
  
-> **Such latant variable behaves as new parameter**? 
- 
+> **Such latant variable behaves like new parameter**? 
+# Weight!!!
+------------------------------------------------------------------------------------------------------------------------
+
 **How to fit it?**(How to find the model parameters?) 
  - The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
  - Setting:
