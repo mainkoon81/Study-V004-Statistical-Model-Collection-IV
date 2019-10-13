@@ -44,6 +44,7 @@ __Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each 
 ### A. Gaussian Mixture Model: Soft Clustering with EM-Algorithm
 __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of θ **`when some data is missing`**(or data is latent variables). When the likelihood(data) is a member of Exponential family, it is particularly applicable. For example, HMM(Hidden Markov) for ?, or GMM(Gaussian Mixture) for clustering? so it's a point estimate at the end? 
  - Introduce a **hidden variable** such that its knowledge would simplify the maximization of the likelihood. 
+ - Give weight to variable & hidden variable. 
  - **How to fit it?**(How to find the model parameters?) 
    - The simplest way to fit a probability distribution is to use **maximum likelihood**. Find the parameters maximizing the likelihood(density)! 
  <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
