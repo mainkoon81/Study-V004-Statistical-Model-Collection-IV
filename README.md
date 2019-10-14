@@ -31,11 +31,11 @@ Latent variable is just a random variable which is unobservable to you nor in tr
 
 ## Latent Variable Modeling_01> Probabilistic Clustering with GMM
 > 1. Let's say, several datasets were hacked and mixed up..How to retrieve the originals? The assumption is each dataset follows a certain statistical distribution....perhaps Gaussian.  
- - Latent variable: membership labeling vectors(0,1,0,..)
+ - Latent variable: membership labeling vectors(0,1,0,..): **Z_i**
    - membership prob vector (weight) = **`P(membership labeling vectors(0,1,0,..))`** 
  
 > 2. Let's say, for a set of given customers, if we know how much money they withdraw / deposit into the game app this month, let's see if we can predict if they will continue using the game app next month or not...Gaussian_YES-churning VS Gaussian_NO-churning.
- - Latent variable: membership labeling vectors(0,1,0,..)
+ - Latent variable: membership labeling vectors(0,1,0,..): **Z_i**
    - membership prob vector (weight) = **`P(membership labeling vectors(0,1,0,..))`** 
 
 __Hard/Soft Clustering:__ Usually clustering is done in a hard way, so for each data point we assign its **membership**. But sometimes, instead of assigning each data point a particular membership, we will assign `each data point` from **probability** distributions over clusters(for example, 40% probability to belong to the A_cluster, and 60% probability to belong to the B_cluster, and 0% to the C_cluster). That is, instead of just assigning each data point a particular cluster, we assume that each data point belongs to every cluster, but with some **different probabilities**: `P(membership|x)` instead of `membership = f(x)`. 
