@@ -92,9 +92,9 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
    b) for example..
    <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
    
-## a. Find `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720104-71482c00-edf0-11e9-9768-35fd152aea12.jpg" /> 
+## a. Find `Weight parameter` by each datapoint. <img src="https://user-images.githubusercontent.com/31917400/66720104-71482c00-edf0-11e9-9768-35fd152aea12.jpg" /> 
  
-## b. Update other parameters using `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720432-86bf5500-edf4-11e9-89f2-2fbee28d4805.jpg" />  
+## b. Update other parameters(mu,var) using `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720432-86bf5500-edf4-11e9-89f2-2fbee28d4805.jpg" />  
  
    
 # 3> M-Step
