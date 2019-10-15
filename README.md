@@ -86,7 +86,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 # 2> E-Step
 <img src="https://user-images.githubusercontent.com/31917400/66834159-09f7bc80-ef55-11e9-99e0-3fb4ed828a8b.jpg" />
 
- - Deal with the **latent variable** as a parameter.  
+ - Deal with the **latent variable** as a parameter (which can represent all other varibales you have..so almost "feature-reduction"?).  
  - Estimate the distribution of the variable and **hidden variable** P(X,Z) given the data + current parameters (create function for the expectation of the log-likelihood).
  - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) by simply feeding current θ and data, and b) estimating next parameters. 
        
