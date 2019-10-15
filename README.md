@@ -78,6 +78,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
 
 ### Q-function: E[log(**`P(joint)`**)|data] : objective function
+<img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
 # 1> Define how many `K`(cluster) we have, then initialize `θ_knot`.
  - give the initial values...whatever..(mu,var)..the weight parameter(mixing proportion) naturally comes from these mu,var parameters.
@@ -112,9 +113,6 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 ## Evaluation: 
 `Are the parameter we have now is the best parameter?` No? Then go back to E-Step.  
 <img src="https://user-images.githubusercontent.com/31917400/66720651-aa37cf00-edf7-11e9-8b3f-226d1cb62357.jpg" /> 
-
- - **What's happening when introducing a latent variable?**
- <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
 [Note]: 
  - When choosing the best run (highest training log-likelihood) among several training attempts with different random initializations, we can suffer from **local maxima**. and its solution would be **NP-Hard**. 
