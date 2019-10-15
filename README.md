@@ -115,10 +115,13 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 <img src="https://user-images.githubusercontent.com/31917400/66720651-aa37cf00-edf7-11e9-8b3f-226d1cb62357.jpg" /> 
 
 [Note]: 
- - When choosing the best run (highest training log-likelihood) among several training attempts with different random initializations, we can suffer from **local maxima**. and its solution would be **NP-Hard**. 
- - We use EM-Algorithm to fit the distribution(such as Gaussian) to the **multi-dimensional** data(estimating the mean vector `μ_` and the covariance matrix `σ_`), not to the one-dimensional data. 
- - We can treat `missing values` as **latent variables** and still estimate the Gaussian parameters. But with one-dimensional data, if a data point has missing values, it means that we don’t know anything about it (its only dimension is missing), so the only thing that is left is to throw away points with missing data.
- - Note that we also don’t need EM to estimate the mean vector (e.i. we need it only for the covariance matrix) in the multi-dimensional case: since each coordinate of the mean vector can be treated independently, we can treat each coordinate as one-dimensional case and just throw away missing values. 
+ - Fitting Error:
+   - When choosing the best run (highest training log-likelihood) among several training attempts with different random initializations, we can suffer from **local maxima**. and its solution would be **NP-Hard**. 
+ - EM for multiple parameters:
+   - We use EM-Algorithm to fit the distribution(such as Gaussian) to the **multi-dimensional** data(estimating the mean vector `μ_` and the covariance matrix `σ_`), not to the one-dimensional data.
+ - EM for NA in multiple fields:
+   - We can treat `missing values` by introducing **latent variable** that comprehensively reflects all multiple data fields we have, then estimate the distribution parameters of each membership that the latent variable is explaining. But with one-dimensional data, if a data field has missing values, it means that we don’t know anything about it (its only dimension is missing), so we might throw away points with missing data.
+   - Note that we also don’t need EM to estimate the 'mu' vector (e.i. we need it only for the covariance matrix) in the multi-dimensional case: since each coordinate of the 'mu' vector can be treated independently, we can treat each coordinate as one-dimensional case and just throw away missing values. 
 
 
 
