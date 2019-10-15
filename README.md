@@ -94,21 +94,23 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
    b) for example..
    <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
    
-## a. Find `Weight parameter` by each datapoint. <img src="https://user-images.githubusercontent.com/31917400/66720104-71482c00-edf0-11e9-9768-35fd152aea12.jpg" /> 
+## Find `Weight parameter` by each datapoint. <img src="https://user-images.githubusercontent.com/31917400/66720104-71482c00-edf0-11e9-9768-35fd152aea12.jpg" /> 
  
-## b. Update other parameters(mu,var) using `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720432-86bf5500-edf4-11e9-89f2-2fbee28d4805.jpg" />  
- 
-   
 # 3> M-Step
 <img src="https://user-images.githubusercontent.com/31917400/66831626-07469880-ef50-11e9-88ff-589b8fc9d09f.jpg" />
-<img src="https://user-images.githubusercontent.com/31917400/66709385-00a30000-ed5b-11e9-88d4-4ad9068c38e8.jpg" /> 
 
  - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model by **`Evaluating the log-likelihood which sums for all clusters`**(Computes parameters maximizing the expected log-likelihood found on the E step). The higher the value, the more sure we are that the mixer model fits out dataset. The purpose is to maximize this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum.
- - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..)  
- <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
- <img src="https://user-images.githubusercontent.com/31917400/66720651-aa37cf00-edf7-11e9-8b3f-226d1cb62357.jpg" /> 
+ - **Get the maximizer** from maximizing the Q-function and update... (but sometimes you cannot get the maximizer..) 
+ <img src="https://user-images.githubusercontent.com/31917400/66709385-00a30000-ed5b-11e9-88d4-4ad9068c38e8.jpg" /> 
 
- - **What's happening if we introduce a latent variable?**
+ <img src="https://user-images.githubusercontent.com/31917400/66701362-89865100-ecf3-11e9-946b-de8c491c782c.jpg" />
+
+## Update other parameters(mu,var) using `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720432-86bf5500-edf4-11e9-89f2-2fbee28d4805.jpg" />  
+ 
+## Evaluation: Are the parameter we have now is the best parameter? No? Then go back to E-Step.  
+<img src="https://user-images.githubusercontent.com/31917400/66720651-aa37cf00-edf7-11e9-8b3f-226d1cb62357.jpg" /> 
+
+ - **What's happening when introducing a latent variable?**
  <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
 [Note]: 
