@@ -84,7 +84,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
  - give the initial values...whatever..(mu,var)..the weight parameter(mixing proportion) naturally comes from these mu,var parameters.
    
 # 2> E-Step
-<img src="https://user-images.githubusercontent.com/31917400/66831623-044ba800-ef50-11e9-9240-695f989df3f0.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/66834159-09f7bc80-ef55-11e9-99e0-3fb4ed828a8b.jpg" />
 
  - Deal with the **latent variable** as a parameter.  
  - Estimate the distribution of the variable and **hidden variable** P(X,Z) given the data + current parameters (create function for the expectation of the log-likelihood).
@@ -99,7 +99,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 ## Find `Weight parameter` by each datapoint. <img src="https://user-images.githubusercontent.com/31917400/66720104-71482c00-edf0-11e9-9768-35fd152aea12.jpg" /> 
  
 # 3> M-Step
-<img src="https://user-images.githubusercontent.com/31917400/66831626-07469880-ef50-11e9-88ff-589b8fc9d09f.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/66834169-0c5a1680-ef55-11e9-9805-e3362516e624.jpg" />
 
  - Deal with the real parameters. 
  - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model by **`Evaluating the log-likelihood which sums for all clusters`**(Computes parameters maximizing the expected log-likelihood found on the E step). The higher the value, the more sure we are that the mixer model fits out dataset. The purpose is to maximize this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum.
