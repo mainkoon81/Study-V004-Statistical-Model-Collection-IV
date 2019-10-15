@@ -109,7 +109,8 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 
 ## Update other parameters(mu,var) using `Weight parameter`. <img src="https://user-images.githubusercontent.com/31917400/66720432-86bf5500-edf4-11e9-89f2-2fbee28d4805.jpg" />  
  
-## Evaluation: Are the parameter we have now is the best parameter? No? Then go back to E-Step.  
+## Evaluation: 
+`Are the parameter we have now is the best parameter?` No? Then go back to E-Step.  
 <img src="https://user-images.githubusercontent.com/31917400/66720651-aa37cf00-edf7-11e9-8b3f-226d1cb62357.jpg" /> 
 
  - **What's happening when introducing a latent variable?**
