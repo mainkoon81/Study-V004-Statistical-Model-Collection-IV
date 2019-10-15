@@ -77,7 +77,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 ## EM can address this by iteratively improving our parameter estimate.
 <img src="https://user-images.githubusercontent.com/31917400/51492177-c3e84080-1da8-11e9-8386-e1ce3e4eb595.jpg" /> 
 
-### Q-function: E[log(**`P(joint)`**)|data] : objective function
+### Q-function(objective): "log(**`P(joint)`**)|data" 
 <img src="https://user-images.githubusercontent.com/31917400/51533344-71576480-1e3a-11e9-8570-c0128a7cc197.jpg" /> 
 
 # 1> Define how many `K`(cluster) we have, then initialize `θ_knot`.
