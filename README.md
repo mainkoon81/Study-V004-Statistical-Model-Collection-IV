@@ -29,7 +29,7 @@ Latent variable is just a random variable which is unobservable to you nor in tr
  - `Latent variable` acting like a **parameter**, can make things interpretable as we, for example, can estimate his intelligence on the scale from 1 to 100 although you don't know what the "scale" means. However, you can compare each data point according to this scale because **`it gives weights`**!
 > Sometimes adding latent variables **restrict(overly simplify) your model** too much. If, for example, a student is doing 2 tests in the same day, it doesn’t make sense to assume that these two grades are caused only by his intelligence and doesn’t influence each other directly. Even if we know that he is very smart, if he failed the first test he is more likely to fail the second one because he may have a headache or maybe he didn’t have time to prepare the day before.
 
-## Latent Variable Modeling_01> Probabilistic Clustering with GMM
+## [atent Variable Modeling_01> [Probabilistic Clustering with GMM]
 > 1. Let's say, several datasets were hacked and mixed up..How to retrieve the originals? The assumption is each dataset follows a certain statistical distribution....perhaps Gaussian.  
  - Latent variable: membership labeling vectors(0,1,0,..): **Z_i**
    - membership prob vector (weight) = **`P(membership labeling vectors(0,1,0,..))`** 
@@ -124,6 +124,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
    - Note that we also don’t need EM to estimate the 'mu' vector (e.i. we need it only for the covariance matrix) in the multi-dimensional case: since each coordinate of the 'mu' vector can be treated independently, we can treat each coordinate as one-dimensional case and just throw away missing values. 
 
 
+## Latent Variable Modeling_02> [HMM]
 
 
 
