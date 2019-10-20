@@ -99,7 +99,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
 ## Find `Weight parameter` by each datapoint. <img src="https://user-images.githubusercontent.com/31917400/66720104-71482c00-edf0-11e9-9768-35fd152aea12.jpg" /> 
  
 # 3> M-Step
-<img src="https://user-images.githubusercontent.com/31917400/67166003-70307500-f383-11e9-9f89-653b225ab2d8.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/67166068-12505d00-f384-11e9-8a54-556619b84db1.jpg" />
 
  - Deal with the real parameters. 
  - Maximize the joint distribution of the data and the hidden variable. In other words, given the current data, estimate the parameters to update the model by **`Evaluating the log-likelihood which sums for all clusters`**(Computes parameters maximizing the expected log-likelihood found on the E step). The higher the value, the more sure we are that the mixer model fits out dataset. The purpose is to maximize this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum.
