@@ -91,7 +91,7 @@ __General form of EM-Algorithm:__ This is an algorithm for obtaining MLE/MAP of 
  - **Get the Q-function** by a) computing the **Conditional Expectation** of the log(joint distribution) by simply feeding current θ and data, and b) estimating next parameters. 
        
    a)
-   <img src="https://user-images.githubusercontent.com/31917400/66671143-542a2680-ec53-11e9-886e-87dbaedf6adf.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/67166777-7f66f100-f38a-11e9-8cbc-bb5312298b42.jpg" />
      
    b) for example..the change of distribution from `theta` to `theta_t`
    <img src="https://user-images.githubusercontent.com/31917400/66701345-45934c00-ecf3-11e9-87d6-3c21f9e088f0.jpg" />
