@@ -133,6 +133,8 @@ Problem?
 How HMM helps? `Transition` & `Emission`
 <img src="https://user-images.githubusercontent.com/31917400/67762568-aa61dc80-fa3d-11e9-8b83-7b70bead96de.jpg" /> 
 
+This is how HMM generate the `joint probability` of the given sentence!
+<img src="https://user-images.githubusercontent.com/31917400/67763816-750abe00-fa40-11e9-9625-5c7502373d13.jpg" /> 
 
 
 
