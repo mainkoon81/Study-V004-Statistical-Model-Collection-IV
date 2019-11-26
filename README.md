@@ -13,19 +13,20 @@ The "Random Intercept model" as a hierarchical model assumes each "region" has i
 ### What's going on?
 <img src="https://user-images.githubusercontent.com/31917400/69556755-40d1e100-0f9d-11ea-8fc8-589a3b5749f9.jpg" />
 
-### Hierarchical Linear Model 01
+### Linear Model 01
+<img src="https://user-images.githubusercontent.com/31917400/69586448-852fa200-0fda-11ea-840d-a9789629b05e.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/69586456-8b258300-0fda-11ea-8e2f-d7caeac5bd1d.jpg" />
 
-### Bayesian Linear Model 02
+### Normal Hierarchical 02
+<img src="https://user-images.githubusercontent.com/31917400/69587895-d772c200-0fde-11ea-8a6f-835381c96c85.jpg" />
 
-### Normal Hierarchical 03
+### Poisson Hierarchical 03
+<img src="" />
 
-### Poisson Hierarchical 04
+### Survival Analysis 04
+<img src="https://user-images.githubusercontent.com/31917400/69587588-d9885100-0fdd-11ea-95c5-925a2967c32f.jpg" />
 
-### Bayesian Survival Analysis 05
 
-### Mixed Effect 06
-
-### Generalized Mixed Effect 07
 
 
 
