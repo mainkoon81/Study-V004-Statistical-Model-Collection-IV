@@ -21,7 +21,7 @@ The "Random Intercept model" as a hierarchical model assumes each "region" has i
 <img src="https://user-images.githubusercontent.com/31917400/69587895-d772c200-0fde-11ea-8a6f-835381c96c85.jpg" />
 
 ### Poisson Hierarchical 03
-<img src="" />
+<img src="https://user-images.githubusercontent.com/31917400/69635421-3c183600-104c-11ea-87db-614ed52e6f16.jpg" />
 
 ### Survival Analysis 04
 <img src="https://user-images.githubusercontent.com/31917400/69587588-d9885100-0fdd-11ea-95c5-925a2967c32f.jpg" />
