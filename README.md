@@ -160,8 +160,10 @@ This is how HMM generate the `joint probability` of the given sentence and pick 
 <img src="https://user-images.githubusercontent.com/31917400/67765592-6c1beb80-fa44-11e9-846c-abe650157941.jpg" /> 
 
 
-
-
+-----------------------------------------------------------------------------------------------------------
+# 02. Basic Hierarchical Model: Regression
+What's your priors?
+<img src="https://user-images.githubusercontent.com/31917400/79686064-550cc800-8235-11ea-96e8-164c6717541f.jpg" /> 
 
 
 
