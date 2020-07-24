@@ -60,6 +60,10 @@ What's your priors?
 
 In logistic regression, you're interested merely in whether the outcome happens, it does not matter when it happened. In contrast, in survival analysis, we're interested not just in whether the outcome of interest happens, but also **how long it took them to get that outcome**, that is, the time to event. Survival analysis explores the relation between features of interest and the time to any binary outcome. 
 
+Two Core concepts
+ - Survival Function
+ - Censoring 
+
 
 
 
