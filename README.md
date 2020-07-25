@@ -82,6 +82,7 @@ Time-To-Event Table
 
    - Note that we might have some drop outs. These data are censored and should be treated differently. When a data is missing at time `t`, it seems the subject was alive at time `t`, but we don't know whether the subject has died or survived....
 
+Kaplan-Mieier Plot
 
 
 
