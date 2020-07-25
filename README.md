@@ -68,7 +68,7 @@ Time-To-Event Table
  - This table is used to measure the probability of event at a given time and the duration at varying times.
  - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival function`, one of two core concepts in survival analysis. 
    - Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
-   <img src="https://user-images.githubusercontent.com/31917400/88457171-380f1300-ce7c-11ea-8f3b-a91cfccfb3cf.jpg" /> 
+   <img src="https://user-images.githubusercontent.com/31917400/88457347-807b0080-ce7d-11ea-9660-13ce029886b4.jpg" /> 
 
    - The calculations continue in that way. However, it ignores the more realistic case when people drop out or are "lost to follow-up". The technical term for this is that **these people are censored**. `Censoring` has different forms, but the type due to people dropping out – or when people are still alive at the study end – is the most common.
    `Kaplan-Meier table` and associated plot is the simplest (but not the only) way of estimating the survival time when you have drop-outs.
