@@ -74,7 +74,7 @@ Time-To-Event Table
    `Kaplan-Meier table` and associated plot is the simplest (but not the only) way of estimating the survival time when you have drop-outs. 
    - The plot of the **`survival function` versus `time`** is called the **[survival curve]**. The Kaplan-Meier method can be used to estimate this curve from the observed survival times without the assumption of an underlying probability distribution. One reason why the **KM method** is so popular is that it doesn't make any such assumptions.
    - For example,... the basic idea underlying Kaplan-Meier tables comes into play here: the probability of surviving past day `t` is simply 
-     - : **proportion** of patients that survive on day `t` X **probability** of surviving past day `t-1`  
+     - : {**proportion** of survivors on day `t`} * {**probability** of surviving past day `t-1`}  
      <img src="https://user-images.githubusercontent.com/31917400/88457766-16645a80-ce81-11ea-9f86-8ded66f2b17f.jpg" /> 
    
    - then...plot the time column against the probability column, we end up with a survival curve. 
