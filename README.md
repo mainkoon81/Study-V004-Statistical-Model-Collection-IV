@@ -62,18 +62,18 @@ What's your priors?
 In logistic regression, you're interested merely in whether the outcome happens, it does not matter when it happened. In contrast, in survival analysis, we're interested not just in whether the outcome of interest happens, but also **how long it took them to get that outcome**, that is, the time to event. Survival analysis explores the relation between features of interest and the time to any binary outcome. 
 
 Two Core concepts
- - 1. Survival Function(probability)
+ - 1. Survival rate(probability)
  - 2. Censoring 
 
 Time-To-Event Table
  - This table is used to measure the probability of event at a given time and the duration at varying times.
- - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival function`, one of two core concepts in survival analysis. 
+ - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival rate`, one of two core concepts in survival analysis. 
    - Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
      <img src="https://user-images.githubusercontent.com/31917400/88457347-807b0080-ce7d-11ea-9660-13ce029886b4.jpg" /> 
 
    - The calculations continue in that way. However, it ignores the more realistic case when people drop out or are "lost to follow-up". The technical term for this is that **these people are censored**. `Censoring` has different forms, but the type due to people dropping out – or when people are still alive at the study end – is the most common.
    `Kaplan-Meier table` and associated plot is the simplest (but not the only) way of estimating the survival time when you have drop-outs. 
-   - The plot of the **`survival function` versus `time`** is called the **[survival curve]**. The Kaplan-Meier method can be used to estimate this curve from the observed survival times without the assumption of an underlying probability distribution. One reason why the **KM method** is so popular is that it doesn't make any such assumptions.
+   - The plot of the **`survival rate` versus `time`** is called the **[survival curve]**. The Kaplan-Meier method can be used to estimate this curve from the observed survival times without the assumption of an underlying probability distribution. One reason why the **KM method** is so popular is that it doesn't make any such assumptions.
    - For example,... the basic idea underlying Kaplan-Meier tables comes into play here: **Probability of surviving past day `t`** is simply 
      - = {**proportion** of survivors on day `t`} * {**probability** of surviving past day `t-1`}  
      <img src="https://user-images.githubusercontent.com/31917400/88457766-16645a80-ce81-11ea-9f86-8ded66f2b17f.jpg" /> 
@@ -101,8 +101,13 @@ Kaplan-Mieier Method and Log-Rank test
   # To compare survival by gender, we can run a "logrank" test...a sort of Contingency test..
   survdiff( Surv(time_var, death_var) ~ gender_var, rho=0 ) #With rho = 0,... which is the default so we don’t need to write this bit,... it yields the log-rank test. 
   ```
+[Note] Kaplan-Meier method and log-rank tests explore the relation between one predictor and mortality variable over time but they can only manage **one predictor**. In contrast, `Cox proportional hazards model` can handle multiple predictors. It's a type of regression.  
 
-
+Cox Proportional Hazards Model
+ - 'hazard' is having the outcome of interest (a risk of death as a given moment) in time.
+ - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...?  
+ - The way the hazard changes over time is called the `hazard rate`. 
+ - The proportionality of hazards is crucial and should be tested 
 
 
 
