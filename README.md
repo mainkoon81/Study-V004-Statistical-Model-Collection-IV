@@ -61,11 +61,19 @@ What's your priors?
 In logistic regression, you're interested merely in whether the outcome happens, it does not matter when it happened. In contrast, in survival analysis, we're interested not just in whether the outcome of interest happens, but also **how long it took them to get that outcome**, that is, the time to event. Survival analysis explores the relation between features of interest and the time to any binary outcome. 
 
 Two Core concepts
- - Survival Function
- - Censoring 
+ - 1. Survival Function
+ - 2. Censoring 
 
+Time-To-Event Table
+ - This table is used to measure the probability of event at a given time and the duration at varying times.
+ - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival function`, one of two core concepts in survival analysis. 
+   - Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
+   <img src="https://user-images.githubusercontent.com/31917400/79686064-550cc800-8235-11ea-96e8-164c6717541f.jpg" /> 
 
-
+   - The calculations continue in that way. However, it ignores the more realistic case when people drop out or are "lost to follow-up". The technical term for this is that **these people are censored**. `Censoring` has different forms, but the type due to people dropping out – or when people are still alive at the study end – is the most common.
+   `Kaplan-Meier table` and associated plot is the simplest (but not the only) way of estimating the survival time when you have drop-outs.
+   
+   
 
 
 
