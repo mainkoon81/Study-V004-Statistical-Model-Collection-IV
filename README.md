@@ -62,7 +62,7 @@ What's your priors?
 In logistic regression, you're interested merely in whether the outcome happens, it does not matter when it happened. In contrast, in survival analysis, we're interested not just in whether the outcome of interest happens, but also **how long it took them to get that outcome**, that is, the time to event. Survival analysis explores the relation between features of interest and the time to any binary outcome. 
 
 Two Core concepts
- - 1. Survival rate(probability)
+ - 1. Survival rate..it's a probability function.
  - 2. Censoring 
 
 Time-To-Event Table
@@ -105,10 +105,9 @@ Kaplan-Mieier Method and Log-Rank test
 
 Cox Proportional Hazards Model
  - 'hazard' is having the outcome of interest (a risk of death as a given moment) in time.
- - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...?  
- - The way the hazard changes over time is called the `hazard rate`. 
- - The proportionality of hazards is crucial and should be tested 
-
+ - The way the hazard changes over time is called the `hazard rate` which can be a probability function. The hazard function `h(t)` is the probability of the event happening at time `t`, given that it has not yet happened. In other words, `h(t)` is the probability of dying at time `t` **having survived up to time `t`**.
+ - Usually in survival analysis, we are interested in the difference between survival curves of different groups of patients.
+ - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The proportionality of hazards is crucial and should be tested.. 
 
 
 
