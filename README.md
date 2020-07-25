@@ -68,12 +68,16 @@ Time-To-Event Table
  - This table is used to measure the probability of event at a given time and the duration at varying times.
  - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival function`, one of two core concepts in survival analysis. 
    - Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
-   <img src="https://user-images.githubusercontent.com/31917400/88457347-807b0080-ce7d-11ea-9660-13ce029886b4.jpg" /> 
+     <img src="https://user-images.githubusercontent.com/31917400/88457347-807b0080-ce7d-11ea-9660-13ce029886b4.jpg" /> 
 
    - The calculations continue in that way. However, it ignores the more realistic case when people drop out or are "lost to follow-up". The technical term for this is that **these people are censored**. `Censoring` has different forms, but the type due to people dropping out – or when people are still alive at the study end – is the most common.
-   `Kaplan-Meier table` and associated plot is the simplest (but not the only) way of estimating the survival time when you have drop-outs.
+   `Kaplan-Meier table` and associated plot is the simplest (but not the only) way of estimating the survival time when you have drop-outs. 
+   - The plot of the **`survival function` versus `time`** is called the **[survival curve]**. The Kaplan-Meier method can be used to estimate this curve from the observed survival times without the assumption of an underlying probability distribution. One reason why the **KM method** is so popular is that it doesn't make any such assumptions.
+   - For example,... the basic idea underlying Kaplan-Meier tables comes into play here: the probability of surviving past day `t` is simply the **probability** of surviving past day `t-1` * the **proportion** of patients that survive on day `t`. 
+     <img src="https://user-images.githubusercontent.com/31917400/88457766-16645a80-ce81-11ea-9f86-8ded66f2b17f.jpg" /> 
    
-   
+   - then...plot the time column against the probability column, we end up with a survival curve. 
+     <img src="https://user-images.githubusercontent.com/31917400/88457881-bf12ba00-ce81-11ea-8cf5-6fe9676a1cf0.jpg" /> 
 
 
 
