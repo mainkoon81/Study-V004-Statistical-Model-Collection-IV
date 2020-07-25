@@ -61,7 +61,7 @@ What's your priors?
 In logistic regression, you're interested merely in whether the outcome happens, it does not matter when it happened. In contrast, in survival analysis, we're interested not just in whether the outcome of interest happens, but also **how long it took them to get that outcome**, that is, the time to event. Survival analysis explores the relation between features of interest and the time to any binary outcome. 
 
 Two Core concepts
- - 1. Survival Function
+ - 1. Survival Function(probability)
  - 2. Censoring 
 
 Time-To-Event Table
@@ -79,6 +79,8 @@ Time-To-Event Table
    
    - then...plot the time column against the probability column, we end up with a survival curve. 
      <img src="https://user-images.githubusercontent.com/31917400/88457881-bf12ba00-ce81-11ea-8cf5-6fe9676a1cf0.jpg" /> 
+
+   - Note that we might have some drop outs. These data are censored and should be treated differently. When a data is missing at time `t`, it seems the subject was alive at time `t`, but we don't know whether the subject has died or survived....
 
 
 
