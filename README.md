@@ -87,7 +87,20 @@ Kaplan-Mieier Method and Log-Rank test
  - KM method estimates the survival curve and yields the KM-table. 
  - The log-rank test compares the **survival time** by the given feature. 
 
+  ```
+  km_fit <- survfit( Surv(time_var, death_var) ~ 1 ) #No features but just having the intercept, denoted by “1”
+  plot(km_fit, xlab="Survival times(days)", ylab="P(survival)")
 
+  # The "times" argument gives us control over what time periods we want to see. it says output every day for the <first week>, then at <30, 60 and 90 days>, and then <every 90 days> thereafter.
+  summary(km_fit, times = c(1:7,30,60,90*(1:10))) 
+
+  # Let’s extend this by splitting the curve by gender:
+  km_gender_fit <- survfit( Surv(time_var, death_var) ~ gender_var ) 
+  plot(km_gender_fit, xlab="Survival times(days)", ylab="P(survival) by gender")
+
+  # To compare survival by gender, we can run a "logrank" test...a sort of Contingency test..
+  survdiff( Surv(time_var, death_var) ~ gender_var, rho=0 ) #With rho = 0,... which is the default so we don’t need to write this bit,... it yields the log-rank test. 
+  ```
 
 
 
