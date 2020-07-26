@@ -121,9 +121,9 @@ In most situations, we are interested in comparing groups with respect to their 
  - HR = model_trt / model_ctrl
 
 When the regression coefficient is (+), or equivalently a hazard ratio(HR) greater than one, indicates that as the value of predictors increases, the event hazard increases and thus the length of survival decreases. Put another way, a hazard ratio above 1 indicates a covariate that is positively associated with the event probability, and thus negatively associated with the length of survival.
- - `HR = 1`: No effect
- - `HR < 1`: Reduction in the hazard
- - `HR > 1`: Increase in the hazard
+ - `HR = 1`: No effect..the risk factor does not affect survival.
+ - `HR < 1`: then it means Reduction in the hazard...so the treatment is NICE!
+ - `HR > 1`: then it means Increase in Hazard...so the treatment is fucked up.
 
 ## Bayesian Cox Proportional Hazards Model
 yvjvv
