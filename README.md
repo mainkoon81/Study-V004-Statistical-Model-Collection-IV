@@ -101,14 +101,16 @@ Kaplan-Mieier Method and Log-Rank test
   # To compare survival by gender, we can run a "logrank" test...a sort of Contingency test..
   survdiff( Surv(time_var, death_var) ~ gender_var, rho=0 ) #With rho = 0,... which is the default so we don’t need to write this bit,... it yields the log-rank test. 
   ```
-[Note] Kaplan-Meier method and log-rank tests explore the relation between one predictor and mortality variable over time but they can only manage **one predictor**. In contrast, `Cox proportional hazards model` can handle multiple predictors. It's a type of regression.  
+[Note] Kaplan-Meier method and log-rank tests explore the relation between one predictor and mortality variable over time but they can only manage **one predictor**. In contrast, `Cox proportional hazards model` can handle multiple predictors as a type of regression.  
 
 ## Cox Proportional Hazards Model Basics
 'hazard' is having the outcome of interest (a risk of the event happening as a given moment) in time. The way the hazard changes over time is called the `hazard rate` which can be a pdf. The thing is hazard function `h(t)` is the probability of the event happening at time `t`, given that it has not yet happened. In other words, `h(t)` is the probability of dying at time `t` **having survived up to time `t`**.
  - Usually in survival analysis, we are interested in the difference between `survival curves`(h(t) vs t) of different groups of patients.
  - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The proportionality of hazards is crucial and should be tested.. 
+ - `s(t)` is the **Survival probability** that an individual survives from the time origin (e.g. diagnosis of cancer) to a specified future time `t`.
+ - `h(t)` is the **Hazard probability** that an individual who is under observation at a time `t` has an event at that time.
 
-
+Note that, in contrast to the survivor function, which focuses on not having an event, the **hazard function focuses on the event occurring**.
 
 
 
