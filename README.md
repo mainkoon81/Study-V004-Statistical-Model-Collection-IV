@@ -108,7 +108,8 @@ Kaplan-Mieier Method and Log-Rank test
  - Usually in survival analysis, we are interested in the difference between `survival curves`(S(t) vs t) of different groups of patients.
  - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The proportionality of hazards is crucial and should be tested.. 
  - `S(t)` is the **Survival probability** that the event of interest has **Not occurred** by duration `t`.
- - `λ(t)` is the **Hazard probability** that an individual has an event **occurring** under observation at a time `t`. It is the derivative of (`1 - S(t)`)
+ - `λ(t)` is the **Hazard probability** that an individual has an event **occurring** under observation at a time `t`. 
+   - It is the derivative of (`1 - S(t)`) over `S(t)`
 
 Note that, in contrast to the survivor function, which focuses on not having an event, the **hazard function focuses on the event occurring**.
 <img src="https://user-images.githubusercontent.com/31917400/88485336-0629a980-cf6d-11ea-838a-ff5180c52064.jpg" /> 
