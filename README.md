@@ -103,13 +103,26 @@ Kaplan-Mieier Method and Log-Rank test
   ```
 [Note] Kaplan-Meier method and log-rank tests explore the relation between one predictor and mortality variable over time but they can only manage **one predictor**. In contrast, `Cox proportional hazards model` can handle multiple predictors. It's a type of regression.  
 
-Cox Proportional Hazards Model
- - 'hazard' is having the outcome of interest (a risk of death as a given moment) in time.
- - The way the hazard changes over time is called the `hazard rate` which can be a probability function. The hazard function `h(t)` is the probability of the event happening at time `t`, given that it has not yet happened. In other words, `h(t)` is the probability of dying at time `t` **having survived up to time `t`**.
- - Usually in survival analysis, we are interested in the difference between survival curves of different groups of patients.
+## Cox Proportional Hazards Model
+'hazard' is having the outcome of interest (a risk of the event happening as a given moment) in time. The way the hazard changes over time is called the `hazard rate` which can be a pdf. The thing is hazard function `h(t)` is the probability of the event happening at time `t`, given that it has not yet happened. In other words, `h(t)` is the probability of dying at time `t` **having survived up to time `t`**.
+ - Usually in survival analysis, we are interested in the difference between `survival curves`(h(t) vs t) of different groups of patients.
  - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The proportionality of hazards is crucial and should be tested.. 
 
-Missing data in survival analysis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> Missing data in survival analysis
   - Missing data are a common problem in research. The conclusions of analyses where the data are complete can be very different from analyses with incomplete data. How do you make sure your analysis yields the correct conclusion, even though the data are not complete?
     - First, you need to understand why some data are missing. This is important, because the techniques you decide to apply depend on the reason some data are missing. Be aware that there is no statistical test telling us why the data are missing. This is done by combining reason and knowledge on how the data were collected. Something I’ve emphasised throughout this course and the previous ones in the series is that there is no substitute for getting to know your data. Part of this is by tabulation and histograms etc, but another key part of it comes before any descriptive analysis – knowing how the data were generated and the potential for missing or invalid values in each data field. Let’s now recap patterns of missingness. 
     - We say that data are 'missing completely at random' (MCAR) when the complete cases (patients without any missing values for a given data item) are a random sample of the whole dataset (all patients). One patient is just as likely to have missing values as any other patient: males just as likely as females, older patients just as likely as younger ones etc. This can happen when a participant didn't have time to fill out the questionnaire or some information was lost or misplaced - and none of these things happened in a systematic way. This is the easiest situation to deal with, though sadly it’s often rather an unrealistic assumption.
