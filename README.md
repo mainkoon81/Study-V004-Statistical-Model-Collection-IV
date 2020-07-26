@@ -105,15 +105,15 @@ Kaplan-Mieier Method and Log-Rank test
 
 ## Cox Proportional Hazards Model Basics
 'hazard' is having the outcome of interest (a risk of the event happening as a given moment) in time. The way the hazard changes over time is called the `hazard rate` which can be a pdf. The thing is hazard function `λ(t)` is the probability of the event happening at time `t`, given that it has not yet happened. In other words, `λ(t)` is the probability of dying at time `t` **having not dying up to time `t`**.
- - Usually in survival analysis, we are interested in the difference between `survival curves`(s(t) vs t) of different groups of patients.
+ - Usually in survival analysis, we are interested in the difference between `survival curves`(S(t) vs t) of different groups of patients.
  - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The proportionality of hazards is crucial and should be tested.. 
- - `s(t)` is the **Survival probability** that the event of interest has **Not occurred** by duration `t`.
- - `λ(t)` is the **Hazard probability** that an individual has an event **occurring** under observation at a time `t`
+ - S(t)` is the **Survival probability** that the event of interest has **Not occurred** by duration `t`.
+ - `λ(t)` is the **Hazard probability** that an individual has an event **occurring** under observation at a time `t`. It is the derivative of (`1 - S(t)`)
 
 Note that, in contrast to the survivor function, which focuses on not having an event, the **hazard function focuses on the event occurring**.
 <img src="https://user-images.githubusercontent.com/31917400/88485336-0629a980-cf6d-11ea-838a-ff5180c52064.jpg" /> 
 
-At the end of the day, `s(t)` and `λ(t)` together give the **Exponential Distribution** which the variable `t` follows. The Cox model allows us to examine how specified features influence the **`rate of a particular event happening: λ(t)`** at a particular point `t` in time. 
+At the end of the day, `S(t)` and `λ(t)` together give the **Exponential Distribution** which the variable `t` follows. The Cox model allows us to examine how specified features influence the **`rate of a particular event happening: λ(t)`** at a particular point `t` in time. 
 <img src="https://user-images.githubusercontent.com/31917400/88485565-9f0cf480-cf6e-11ea-8074-a4e4f8efd7ba.jpg" /> 
 
 
