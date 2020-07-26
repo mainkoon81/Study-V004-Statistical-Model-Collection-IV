@@ -111,7 +111,7 @@ Kaplan-Mieier Method and Log-Rank test
  - `λ(t)` is the **Hazard probability** that an individual, who is under observation at a time `t`, has an event at that time.
 
 Note that, in contrast to the survivor function, which focuses on not having an event, the **hazard function focuses on the event occurring**.
-<img src="https://user-images.githubusercontent.com/31917400/88483439-daec8d80-cf5f-11ea-808a-db35f1bfc16a.jpg" /> 
+<img src="https://user-images.githubusercontent.com/31917400/88485336-0629a980-cf6d-11ea-838a-ff5180c52064.jpg" /> 
 
 At the end of the day, `s(t)` and `λ(t)` together give the **Exponential Distribution** which the variable `t` follows. The Cox model allows us to examine how specified features influence the **`rate of a particular event happening: λ(t)`** at a particular point `t` in time. 
 <img src="https://user-images.githubusercontent.com/31917400/88485425-73d5d580-cf6d-11ea-90df-dd99c3df27f9.jpg" /> 
