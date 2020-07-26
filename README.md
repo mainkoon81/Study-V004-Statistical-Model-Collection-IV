@@ -114,7 +114,7 @@ Note that, in contrast to the survivor function, which focuses on not having an 
 <img src="https://user-images.githubusercontent.com/31917400/88483439-daec8d80-cf5f-11ea-808a-db35f1bfc16a.jpg" /> 
 
 At the end of the day, `s(t)` and `λ(t)` together give the **Exponential Distribution** which the variable `t` follows. The Cox model allows us to examine how specified features influence the **`rate of a particular event happening: λ(t)`** at a particular point `t` in time. 
-<img src="https://user-images.githubusercontent.com/31917400/88485246-53f1e200-cf6c-11ea-8aba-b98fe77af474.jpg" /> 
+<img src="https://user-images.githubusercontent.com/31917400/88485425-73d5d580-cf6d-11ea-90df-dd99c3df27f9.jpg" /> 
 
 
 
