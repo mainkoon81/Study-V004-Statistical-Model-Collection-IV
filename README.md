@@ -125,8 +125,8 @@ When the regression coefficient is (+), or equivalently a hazard ratio(HR) great
  - `HR < 1`: Reduction in the hazard
  - `HR > 1`: Increase in the hazard
 
-
-
+## Bayesian Cox Proportional Hazards Model
+yvjvv
 
 
 
