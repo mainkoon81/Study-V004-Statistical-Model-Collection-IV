@@ -107,8 +107,8 @@ Kaplan-Mieier Method and Log-Rank test
 'hazard' is having the outcome of interest (a risk of the event happening as a given moment) in time. The way the hazard changes over time is called the `hazard rate` which can be a pdf. The thing is hazard function `λ(t)` is the probability of the event happening at time `t`, given that it has not yet happened. In other words, `λ(t)` is the probability of dying at time `t` **having not dying up to time `t`**.
  - Usually in survival analysis, we are interested in the difference between `survival curves`(s(t) vs t) of different groups of patients.
  - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The proportionality of hazards is crucial and should be tested.. 
- - `s(t)` is the **Survival probability** that the event of interest has not occurred by duration `t`.
- - `λ(t)` is the **Hazard probability** that an individual, who is under observation at a time `t`, has an event at that time.
+ - `s(t)` is the **Survival probability** that the event of interest has **Not occurred** by duration `t`.
+ - `λ(t)` is the **Hazard probability** that an individual has an event **occurring** under observation at a time `t`
 
 Note that, in contrast to the survivor function, which focuses on not having an event, the **hazard function focuses on the event occurring**.
 <img src="https://user-images.githubusercontent.com/31917400/88485336-0629a980-cf6d-11ea-838a-ff5180c52064.jpg" /> 
