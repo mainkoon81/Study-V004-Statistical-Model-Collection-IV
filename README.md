@@ -104,7 +104,9 @@ Kaplan-Mieier Method and Log-Rank test
 [Note] Kaplan-Meier method and log-rank tests explore the relation between one predictor and mortality variable over time but they can only manage **one predictor**. In contrast, `Cox proportional hazards model` can handle multiple predictors as a type of regression.  
 
 ## Basic Cox Proportional Hazards Model 
-The major theoretical development that this model provides is the ability to model **covariate effects** `in the presence of censored observations`.  
+The major theoretical development that this model provides is the ability to model **covariate effects** `in the presence of censored observations`. The **data** for this model, based on a sample of size `n`, consists of (![formula](https://render.githubusercontent.com/render/math?math=t_j,\delta_j,x_j)), j=1,2,..n where
+ - ![formula](https://render.githubusercontent.com/render/math?math=t_j) is the time on study for the j-th individual
+ - ![formula](https://render.githubusercontent.com/render/math?math=\delta_j) is the event indicator(`1` if the event has occurred, `0` if the event has been censored).    
  
 'hazard' is having the outcome of interest (a risk of the event happening as a given moment) in time. The way the hazard changes over time is called the `hazard rate` which can be a pdf. The thing is hazard function `λ(t)` is the probability of the event happening at time `t`, given that it has not yet happened. In other words, `λ(t)` is the probability of dying at time `t` **having not dying up to time `t`**.
  - Usually in survival analysis, we are interested in the difference between `survival curves`(S(t) vs t) of different groups of patients.
