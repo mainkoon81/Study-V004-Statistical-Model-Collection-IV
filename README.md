@@ -73,8 +73,10 @@ Why it's special? Why LM won't work?
  - 2) multiple measures are of interest
    - For Survival probability: S(`t`) = P(T > `t`)
      - Q. What's the probability that the duration is longer than 5 years ?
-     - Q. What's the typical duration ?
+     - Q. What's the typical duration ? the median time? (What is the `t` when the the survival probability is 0.5 ?)
      - Q. *Out of 100 unemployeed, how many, do we expect, to be back to work again in 5 months ? 
+       <img src="https://user-images.githubusercontent.com/31917400/89131174-b6198c80-d502-11ea-9b6a-2e1f0fff23be.jpg" /> 
+       
    - For Hazard probability: H(`t`) = {1-S(`t`)}' / S(`t`)
    <img src="https://user-images.githubusercontent.com/31917400/89128436-7a27fc80-d4ed-11ea-8a19-54d9e1825d76.jpg" /> 
    
