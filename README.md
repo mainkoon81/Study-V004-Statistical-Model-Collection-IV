@@ -61,16 +61,16 @@ What's your priors?
 ## Intro
 In logistic regression, you're interested merely in whether the outcome happens, it does not matter when it happened. In contrast, in survival analysis, we're interested not just in whether the outcome of interest happens, but also **how long it took them to get that outcome**, that is, the time to event. Survival analysis explores the relation between features of interest and the time to any binary outcome. 
 
-# Duration `t` modelling
+## Duration `t` modelling
 Why it's special? Why LM won't work?
- - 1. all values `t` > 0
- - 2. multiple measures are of interest
+ - 1) all values `t` > 0
+ - 2) multiple measures are of interest
    - For Survival probability
    - For Hazard probability
- - 3. Censoring 
+ - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
 
-
+## Tools
 Time-To-Event Table
  - This table is used to measure the probability of event at a given time and the duration at varying times.
  - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival rate`, one of two core concepts in survival analysis. 
