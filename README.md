@@ -89,17 +89,15 @@ in short,
 ## S(`t`): Probability that the duration is longer than `t`
 ## λ(`t`):
 
-## [Tool I] Time-To-Event Table
- - This table is used to measure the probability of event at a given time and the duration at varying times.
- - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival rate`, one of two core concepts in survival analysis. 
-   - Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
-     <img src="https://user-images.githubusercontent.com/31917400/88457347-807b0080-ce7d-11ea-9660-13ce029886b4.jpg" /> 
+## [Tool I] Kaplan-Meier's Time-To-Event Table
+This table is used to measure the probability of event at a given time and the duration at varying times. The probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival rate`. Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
+   <img src="https://user-images.githubusercontent.com/31917400/88457347-807b0080-ce7d-11ea-9660-13ce029886b4.jpg" /> 
 
-   - The calculations continue in that way. However, it ignores the more realistic case when people drop out or are "lost to follow-up". The technical term for this is that **these people are censored**. `Censoring` has different forms, but the type due to people dropping out – or when people are still alive at the study end – is the most common.
-   `Kaplan-Meier table` and associated plot is the simplest (but not the only) way of estimating the survival time when you have drop-outs. 
-   - The plot of the **`survival rate` versus `time`** is called the **[survival curve]**. The Kaplan-Meier method can be used to estimate this curve from the observed survival times without the assumption of an underlying probability distribution. One reason why the **KM method** is so popular is that it doesn't make any such assumptions.
-   - For example,... the basic idea underlying Kaplan-Meier tables comes into play here: **Probability of surviving past day `t`** is simply 
-     - = {**proportion** of survivors on day `t`} * {**probability** of surviving past day `t-1`}  
+ - The calculations continue in that way. However, it ignores the more realistic case when people drop out or are "lost to follow-up". The technical term for this is that **these people are censored**. `Censoring` refers to the type due to people dropping out – or when people are still alive at the study end – is the most common.
+
+`Kaplan-Meier table` and associated plot is the simplest (but not the only) way of estimating the survival time when you have drop-outs. The plot of the **`survival rate` versus `time`** is called the **[survival curve]**. **This is all about the shirinking AUC**. The Kaplan-Meier method can be used to **estimate** this curve from the observed survival times without the assumption of an underlying probability distribution...so Non-parametric! One reason why the **KM method** is so popular is that it doesn't make any such assumptions.
+ - For example,... the basic idea underlying Kaplan-Meier tables comes into play here: **Probability of surviving past day `t`** is simply 
+   - = {**proportion** of survivors on day `t`} * {**probability** of surviving past day `t-1`}  
      <img src="https://user-images.githubusercontent.com/31917400/88457766-16645a80-ce81-11ea-9f86-8ded66f2b17f.jpg" /> 
    
    - then...plot the time column against the probability column, we end up with a survival curve. 
@@ -107,8 +105,13 @@ in short,
 
    - Note that we might have some drop outs. These data are censored and should be treated differently. When a data is missing at time `t`, it seems the subject was alive at time `t`, but we don't know whether the subject has died or survived....
 
-Kaplan-Mieier Method and Log-Rank test
- - KM method estimates the survival curve and yields the KM-table. 
+
+
+
+__> Kaplan-Mieier Method and Log-Rank test__
+<img src="https://user-images.githubusercontent.com/31917400/89131654-5f15b680-d506-11ea-821f-cd9e297c48ab.jpg" /> 
+
+ - KM method estimates the survival curve and yields the **KM-table**. 
  - The log-rank test compares the **survival time** by the given feature. 
 
   ```
@@ -126,6 +129,13 @@ Kaplan-Mieier Method and Log-Rank test
   survdiff( Surv(time_var, death_var) ~ gender_var, rho=0 ) #With rho = 0,... which is the default so we don’t need to write this bit,... it yields the log-rank test. 
   ```
 [Note] Kaplan-Meier method and log-rank tests explore the relation between one predictor and mortality variable over time but they can only manage **one predictor**. In contrast, `Cox proportional hazards model` can handle multiple predictors as a type of regression.  
+
+
+
+
+
+
+
 
 ## [Tool II] Basic Cox Proportional Hazards Model 
 The major theoretical development that this model provides is the ability to model **covariate effects** `in the presence of censored observations`. The **data** for this model, based on a sample of size `n`, consists of (![formula](https://render.githubusercontent.com/render/math?math=t_j,\delta_j,x_j)), j=1,2,..n where
