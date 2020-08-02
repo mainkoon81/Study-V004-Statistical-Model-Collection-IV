@@ -58,6 +58,12 @@ What's your priors?
 # 03. Basic Survival(Time-to-Event) Model: Regression
 What's your priors?
 
+
+
+
+
+
+
 ## Intro
 In logistic regression, you're interested merely in whether the outcome happens, it does not matter when it happened. In contrast, in survival analysis, we're interested not just in whether the outcome of interest happens, but also **how long it took them to get that outcome**, that is, the time to event. Survival analysis explores the relation between features of interest and the time to any binary outcome. 
 
@@ -70,8 +76,7 @@ Why it's special? Why LM won't work?
  - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
 
-## Tools
-Time-To-Event Table
+## [Tool I] Time-To-Event Table
  - This table is used to measure the probability of event at a given time and the duration at varying times.
  - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival rate`, one of two core concepts in survival analysis. 
    - Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
@@ -109,7 +114,7 @@ Kaplan-Mieier Method and Log-Rank test
   ```
 [Note] Kaplan-Meier method and log-rank tests explore the relation between one predictor and mortality variable over time but they can only manage **one predictor**. In contrast, `Cox proportional hazards model` can handle multiple predictors as a type of regression.  
 
-## Basic Cox Proportional Hazards Model 
+## [Tool II] Basic Cox Proportional Hazards Model 
 The major theoretical development that this model provides is the ability to model **covariate effects** `in the presence of censored observations`. The **data** for this model, based on a sample of size `n`, consists of (![formula](https://render.githubusercontent.com/render/math?math=t_j,\delta_j,x_j)), j=1,2,..n where
  - ![formula](https://render.githubusercontent.com/render/math?math=t_j) is the time on study for the j-th individual
  - ![formula](https://render.githubusercontent.com/render/math?math=\delta_j) is the event indicator(`1` if the event has occurred, `0` if the event has been censored).    
@@ -135,7 +140,7 @@ When the regression coefficient is (+), or equivalently a hazard ratio(HR) great
  - `HR < 1`: then it means Reduction in the hazard...so the treatment is NICE!
  - `HR > 1`: then it means Increase in Hazard...so the treatment is fucked up.
 
-## Bayesian Cox Proportional Hazards Model
+## [Tool III] Bayesian Cox Proportional Hazards Model
 yvjvv
 
 
