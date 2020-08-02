@@ -81,6 +81,10 @@ Why it's special? Why LM won't work?
  - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
 
+in short,
+## S(`t`): Probability that the duration is longer than `t`
+## H(`t`):
+
 ## [Tool I] Time-To-Event Table
  - This table is used to measure the probability of event at a given time and the duration at varying times.
  - Everybody makes it past time zero, so the probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival rate`, one of two core concepts in survival analysis. 
