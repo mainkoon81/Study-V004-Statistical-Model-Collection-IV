@@ -71,8 +71,13 @@ In logistic regression, you're interested merely in whether the outcome happens,
 Why it's special? Why LM won't work?
  - 1) all values `t` > 0
  - 2) multiple measures are of interest
-   - For Survival probability: P(`t`) = S(`t`)
+   - For Survival probability: P(`t`) = S(`t`): Y-axis
+     - Q. What's the probability that the duration is longer than 5 years ?
+     - Q. What's the typical duration ?
+     - Q. *Out of 100 unemployeed, how many, do we expect, to be back to work again in 5 months ? 
    - For Hazard probability: {1-S(`t`)}' / S(`t`)
+   <img src="https://user-images.githubusercontent.com/31917400/89128436-7a27fc80-d4ed-11ea-8a19-54d9e1825d76.jpg" /> 
+   
  - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
 
