@@ -71,8 +71,8 @@ In logistic regression, you're interested merely in whether the outcome happens,
 Why it's special? Why LM won't work?
  - 1) all values `t` > 0
  - 2) multiple measures are of interest
-   - For Survival probability
-   - For Hazard probability
+   - For Survival probability: P(`t`) = S(`t`)
+   - For Hazard probability: {1-S(`t`)}' / S(`t`)
  - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
 
