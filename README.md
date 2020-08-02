@@ -71,21 +71,23 @@ In logistic regression, you're interested merely in whether the outcome happens,
 Why it's special? Why LM won't work?
  - 1) all values `t` > 0
  - 2) multiple measures are of interest
-   - For Survival probability: S(`t`) = P(T > `t`)
+   <img src="https://user-images.githubusercontent.com/31917400/89131359-1957ee80-d504-11ea-9e8c-a24be2fb3097.jpg" /> 
+   
+   - __For Survival probability:__ S(`t`) = P(T > `t`)
      - Q. What's the probability that the duration is longer than 5 years ?
      - Q. What's the typical duration ? the median time? (What is the `t` when the the survival probability is 0.5 ?)
      - Q. *Out of 100 unemployeed, how many, do we expect, to be back to work again in 5 months ? 
        <img src="https://user-images.githubusercontent.com/31917400/89131174-b6198c80-d502-11ea-9b6a-2e1f0fff23be.jpg" /> 
        
-   - For Hazard probability: H(`t`) = {1-S(`t`)}' / S(`t`)
-   <img src="https://user-images.githubusercontent.com/31917400/89128436-7a27fc80-d4ed-11ea-8a19-54d9e1825d76.jpg" /> 
-   
+   - __For Hazard probability:__ λ(`t`) = {1-S(`t`)}' / S(`t`)
+       <img src="https://user-images.githubusercontent.com/31917400/89131174-b6198c80-d502-11ea-9b6a-2e1f0fff23be.jpg" /> 
+       
  - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
 
 in short,
 ## S(`t`): Probability that the duration is longer than `t`
-## H(`t`):
+## λ(`t`):
 
 ## [Tool I] Time-To-Event Table
  - This table is used to measure the probability of event at a given time and the duration at varying times.
