@@ -107,7 +107,7 @@ This table is used to measure the probability of event at a given time and the d
  - But why use Kaplan-Meier? Why don't we just compute the simple cumulative distribution function and use 1−CDF as the estimate for the survivor curve? coz... we must think about `censoring`. Kaplan-Meier curves allow for this.
 
 
-__> Kaplan-Mieier Method and predictors? Log-Rank test__
+__> Do you have predictors? Log-Rank test__
 
  - KM method estimates the survival curve and yields the **KM-table**. 
  - The log-rank test compares the **survival time** by the given feature. 
