@@ -153,7 +153,7 @@ Note that, in contrast to the survivor function, which focuses on not having an 
 At the end of the day, `S(t)` and `λ(t)` together give the **Exponential Distribution** which the variable `t` follows. The Cox model allows us to examine how specified features influence the **`rate of a particular event happening: λ(t)`** at a particular point `t` in time. 
 <img src="https://user-images.githubusercontent.com/31917400/88485565-9f0cf480-cf6e-11ea-8074-a4e4f8efd7ba.jpg" /> 
 
-In most situations, we are interested in comparing groups with respect to their hazards, and we use a hazard ratio, which is analogous to an odds ratio in the setting of multiple logistic regression analysis. The hazard ratio is the ratio of the total number of observed to expected events in two independent comparison groups.
+In most situations, we are interested in comparing groups with respect to their hazards, and we use a hazard ratio, which is analogous to an odds ratio in the setting of multiple logistic regression analysis. The hazard ratio is the ratio of the total number of observed to expected events in two independent comparison groups. HR is defined as the ratio of the predicated hazard function under two different values of a predictor variable. 
  - HR = model_trt / model_ctrl
 
 When the regression coefficient is (+), or equivalently a hazard ratio(HR) greater than one, indicates that as the value of predictors increases, the event hazard increases and thus the length of survival decreases. Put another way, a hazard ratio above 1 indicates a covariate that is positively associated with the event probability, and thus negatively associated with the length of survival.
