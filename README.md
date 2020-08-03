@@ -21,7 +21,7 @@ The "Random Intercept model" as a hierarchical model assumes each "region" has i
 <img src="https://user-images.githubusercontent.com/31917400/89213880-b32fa200-d5bd-11ea-8907-ebd6d68a2532.jpg" />
 
 ## > When `Y` ~ Exponential 
-<img src="https://user-images.githubusercontent.com/31917400/89228176-006c3d80-d5d7-11ea-86d6-eddbd7cfb5d7.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/89229504-6fe32c80-d5d9-11ea-94f5-eda153e57880.jpg" />
 
 > Application
  - **Mixture models** provide a nice way to build nonstandard probability distributions from simper distributions, as well as to identify unlabeled clusters/populations in the data. Mixture models can be formulated **hierarchically**, allowing us to estimate unobserved(latent) variables in a technique called `data augmentation`.
