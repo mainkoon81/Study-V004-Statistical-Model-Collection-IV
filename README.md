@@ -11,7 +11,11 @@ How we might use hierarchical modeling to extend a linear model?
 The "Random Intercept model" as a hierarchical model assumes each "region" has its own intercept - `α1`, `α2`,.. instead of `β0`. And  all intercepts(α) come from a common distribution(here `N(μ, 𝜏)`) with hyper parameters - μ, 𝜏 - that need to be estimated as well. That means each μ and 𝜏 also has its own prior distribution - `P(μ)`, `P(𝜏)`.
 
 ### What's going on?
-<img src="https://user-images.githubusercontent.com/31917400/69556755-40d1e100-0f9d-11ea-8fc8-589a3b5749f9.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/89210774-a3618f00-d5b8-11ea-8d79-590575be7dad.jpg" />
+
+## When `Y` ~ Binomial ?????
+<img src="https://user-images.githubusercontent.com/31917400/89211262-7792d900-d5b9-11ea-9460-fcfe9d3e3b14.jpg" />
+
 
 ### Linear Model 01
 <img src="https://user-images.githubusercontent.com/31917400/69586448-852fa200-0fda-11ea-840d-a9789629b05e.jpg" />
