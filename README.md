@@ -132,9 +132,9 @@ The major theoretical development that this model provides is the ability to mod
 'hazard' is having the outcome of interest (a risk of the event happening as a given moment) in time. The way the hazard changes over time is called the `hazard rate` which can be a pdf. The thing is hazard function `λ(t)` is the probability of the event happening at time `t`, given that it has not yet happened. In other words, `λ(t)` is the probability of dying at time `t` **having not dying up to time `t`**.
  - Usually in survival analysis, we are interested in the difference between `survival curves`(S(t) vs t) of different groups of patients.
  - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The proportionality of hazards is crucial and should be tested.. 
- - `S(t)` is the **Survival probability** that the event of interest has **Not occurred** by duration `t`.
+ - `S(t)` is the **Survival probability** that the event of interest has **Not yet occurred** by duration `t`.
  - `λ(t)` is the **Hazard probability** that an individual has an event **occurring** under observation at a time `t`. 
-   - It is the derivative of (`1 - S(t)`) over `S(t)`
+   - It is the derivative of (`1 - S(t)`) over `S(t)`..so.. f(`t`)/S(`t`)
 
 Note that, in contrast to the survivor function, which focuses on not having an event, the **hazard function focuses on the event occurring**.
 <img src="https://user-images.githubusercontent.com/31917400/88486088-26f4fd80-cf73-11ea-88b6-526cbc4a1fe0.jpg" /> 
