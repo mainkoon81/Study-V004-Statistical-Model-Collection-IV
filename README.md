@@ -9,34 +9,19 @@ How we might use hierarchical modeling to extend a linear model?
 <img src="https://user-images.githubusercontent.com/31917400/48876484-3911b680-edf6-11e8-892b-ec6e8ed8b284.jpg" />
 
 The "Random Intercept model" as a hierarchical model assumes each "region" has its own intercept - `α1`, `α2`,.. instead of `β0`. And  all intercepts(α) come from a common distribution(here `N(μ, 𝜏)`) with hyper parameters - μ, 𝜏 - that need to be estimated as well. That means each μ and 𝜏 also has its own prior distribution - `P(μ)`, `P(𝜏)`.
-
-### What's going on?
 <img src="https://user-images.githubusercontent.com/31917400/89210774-a3618f00-d5b8-11ea-8d79-590575be7dad.jpg" />
 
-## When `Y` ~ Binomial ?????
+## > When `Y` ~ Binomial ?????
 <img src="https://user-images.githubusercontent.com/31917400/89211262-7792d900-d5b9-11ea-9460-fcfe9d3e3b14.jpg" />
 
+## > When `Y` ~ Gaussian 
+<img src="https://user-images.githubusercontent.com/31917400/89212858-246e5580-d5bc-11ea-82a1-46d5cb821bc5.jpg" />
 
-### Linear Model 01
-<img src="https://user-images.githubusercontent.com/31917400/69586448-852fa200-0fda-11ea-840d-a9789629b05e.jpg" />
-<img src="https://user-images.githubusercontent.com/31917400/69586456-8b258300-0fda-11ea-8e2f-d7caeac5bd1d.jpg" />
+## > When `Y` ~ Poisson 
+<img src="https://user-images.githubusercontent.com/31917400/89213880-b32fa200-d5bd-11ea-8907-ebd6d68a2532.jpg" />
 
-### Normal Hierarchical 02
-<img src="https://user-images.githubusercontent.com/31917400/69587895-d772c200-0fde-11ea-8a6f-835381c96c85.jpg" />
-
-### Poisson Hierarchical 03
-<img src="https://user-images.githubusercontent.com/31917400/69635421-3c183600-104c-11ea-87db-614ed52e6f16.jpg" />
-
-### Survival Analysis 04
-<img src="https://user-images.githubusercontent.com/31917400/69587588-d9885100-0fdd-11ea-95c5-925a2967c32f.jpg" />
-
-
-
-
-
-
-
-
+## > When `Y` ~ Exponential 
+<img src="https://user-images.githubusercontent.com/31917400/89227760-28a76c80-d5d6-11ea-84d6-90f31dbbe193.jpg" />
 
 > Application
  - **Mixture models** provide a nice way to build nonstandard probability distributions from simper distributions, as well as to identify unlabeled clusters/populations in the data. Mixture models can be formulated **hierarchically**, allowing us to estimate unobserved(latent) variables in a technique called `data augmentation`.
