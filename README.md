@@ -68,8 +68,8 @@ Why it's special? Why LM won't work?
      - Q. *Out of 100 unemployeed, how many, do we expect, to be back to work again in 5 months ? 
        <img src="https://user-images.githubusercontent.com/31917400/89131174-b6198c80-d502-11ea-9b6a-2e1f0fff23be.jpg" /> 
        
-   - __For Hazard probability:__ λ(`t`) = {1-S(`t`)}' / S(`t`)
-       <img src="..." /> 
+   - __For Hazard rate:__ λ(`t`) = {1-S(`t`)}' / S(`t`)
+       <img src="https://user-images.githubusercontent.com/31917400/89231195-bab27380-d5dc-11ea-9249-6834129bdff3.jpg" /> 
        
  - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
@@ -97,9 +97,7 @@ This table is used to measure the probability of event at a given time and the d
 
 
 __> Do you have predictors? Log-Rank test__
-
- - KM method estimates the survival curve and yields the **KM-table**. 
- - The log-rank test compares the **survival time** by the given feature. 
+KM method estimates the survival curve and yields the **KM-table**. The log-rank test compares the **survival time** by the given feature. 
 
   ```
   km_fit <- survfit( Surv(time_var, death_var) ~ 1 ) #No features but just having the intercept, denoted by “1”
