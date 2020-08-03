@@ -32,7 +32,7 @@ The "Random Intercept model" as a hierarchical model assumes each "region" has i
 
 
 -----------------------------------------------------------------------------------------------------------
-# 02. Basic Hierarchical Model: Regression
+# Basic Hierarchical Model 01.
 What's your priors?
 <img src="https://user-images.githubusercontent.com/31917400/79686064-550cc800-8235-11ea-96e8-164c6717541f.jpg" /> 
 
@@ -44,7 +44,7 @@ What's your priors?
 
 
 -----------------------------------------------------------------------------------------------------------
-# 03. Basic Survival(Time-to-Event) Model: Regression
+# Basic Hierarchical Model 02. Duration(Time-to-Event) 
 What's your priors?
 
 
