@@ -69,7 +69,7 @@ Why it's special? Why LM won't work?
        <img src="https://user-images.githubusercontent.com/31917400/89131174-b6198c80-d502-11ea-9b6a-2e1f0fff23be.jpg" /> 
        
    - __For Hazard rate:__ λ(`t`) = {1-S(`t`)}' / S(`t`)
-       <img src="https://user-images.githubusercontent.com/31917400/89231195-bab27380-d5dc-11ea-9249-6834129bdff3.jpg" /> 
+       <img src="https://user-images.githubusercontent.com/31917400/89231492-5ba12e80-d5dd-11ea-8efb-42aea830ceaa.jpg" /> 
        
  - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
