@@ -74,7 +74,7 @@ Why it's special? Why LM won't work?
  - 3) Censoring...(obv -> Not decided yet: 'survived' or 'missing'?) 
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
 
-In short, we would be interested in something around the **event time `t`** and the **event rate `λ`**. 
+# In short, we would be interested in something around the **event time `t`** and the **event rate `λ`**. 
 ## S(`t`): Probability that the duration is longer than `t`
 ## λ(`t`): Rate of particular event happening under observation at a time `t` (so far). 
 
