@@ -75,8 +75,8 @@ Why it's special? Why LM won't work?
    <img src="https://user-images.githubusercontent.com/31917400/89123205-89934f80-d4c5-11ea-9cc2-70f909ea8080.jpg" /> 
 
 # In short, we would be interested in something around the **event time `t`** and the **event rate `λ`**. 
-## S(`t`): Probability that the duration is longer than `t`
-## λ(`t`): Rate of particular event happening under observation at a time `t` (so far). 
+ - ## S(`t`): Probability that the duration is longer than `t`
+ - ## λ(`t`): Rate of particular event happening under observation at a time `t` (so far). 
 
 ----------------------------------------------------------------------------------------------------------------------
 ## [Tool I] Event time Analysis (Kaplan-Meier's Table)
@@ -94,7 +94,7 @@ This table is used to measure the probability of event at a given time and the d
    <img src="https://user-images.githubusercontent.com/31917400/88457881-bf12ba00-ce81-11ea-8cf5-6fe9676a1cf0.jpg" /> 
 
  - Note that we might have some drop outs. These data are censored and should be treated differently. When a data is missing at time `t`, it seems the subject was alive at time `t`, but we don't know whether the subject has died or survived....
- - But why use Kaplan-Meier? Why don't we just compute the simple cumulative distribution function and use 1−CDF as the estimate for the survivor curve? coz... we must think about `censoring`. Kaplan-Meier curves allow for this.
+ - But why use Kaplan-Meier? Why don't we just compute the simple cumulative distribution function and use 1−CDF as the estimate for the survivor curve? coz... we must think about `censoring`. Kaplan-Meier curves allow for this. Plus, it's a Non-parametric Method! No assumption required!
 
 __> Do you have predictors? Log-Rank test__
 KM method estimates the survival curve and yields the **KM-table**. The log-rank test compares the **survival time** by the given feature. 
