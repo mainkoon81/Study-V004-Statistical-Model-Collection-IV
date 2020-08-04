@@ -132,7 +132,7 @@ The major theoretical development that this model provides is the ability to mod
  - `proportional hazards` means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The two curves cannot be crossed! The proportionality of hazards is crucial and should be tested.. 
 
 At the end of the day, `S(t)` and `λ(t)` together give the **Exponential Distribution** which the variable `t` follows. The Cox model allows us to examine how specified features influence the **`rate of a particular event happening: λ(t)`** at a particular point `t` in time. 
-<img src="https://user-images.githubusercontent.com/31917400/89272412-02191e00-d636-11ea-9ec0-3f12f2cd407d.jpg" /> 
+<img src="https://user-images.githubusercontent.com/31917400/89274361-bae05c80-d638-11ea-90d9-b90f5223fcc9.jpg" /> 
 
 In most situations, we are interested in comparing groups with respect to their hazards, and we use a hazard ratio, which is analogous to an odds ratio in the setting of multiple logistic regression analysis. The hazard ratio is the ratio of the total number of observed to expected events in two independent comparison groups. HR is defined as the ratio of the predicated hazard function under two different values of a predictor variable. 
  - HR = model_trt / model_ctrl
