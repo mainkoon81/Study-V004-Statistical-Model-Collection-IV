@@ -78,6 +78,7 @@ Why it's special? Why LM won't work?
 ## S(`t`): Probability that the duration is longer than `t`
 ## λ(`t`): Rate of particular event happening under observation at a time `t` (so far). 
 
+----------------------------------------------------------------------------------------------------------------------
 ## [Tool I] Event time Analysis (Kaplan-Meier's Table)
 This table is used to measure the probability of event at a given time and the duration at varying times. The probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival rate`. Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
    <img src="https://user-images.githubusercontent.com/31917400/88457347-807b0080-ce7d-11ea-9660-13ce029886b4.jpg" /> 
