@@ -135,7 +135,7 @@ At the end of the day, `S(t)` and `λ(t)` together give the **Exponential Distri
 <img src="https://user-images.githubusercontent.com/31917400/89274361-bae05c80-d638-11ea-90d9-b90f5223fcc9.jpg" /> 
 
 In most situations, we are interested in comparing groups with respect to their hazards, and we use a hazard ratio, which is analogous to an odds ratio in the setting of multiple logistic regression analysis. The hazard ratio is the ratio of the total number of observed to expected events in two independent comparison groups. HR is defined as the ratio of the **`predicated hazard rate`**(Output of Cox) under two different values of a predictor variable. 
- - HR = model_trt / model_ctrl
+ - HR = `COX model_trt` / `COX model_ctrl`
 
 When the regression coefficient is (+), or equivalently a hazard ratio(HR) greater than one, indicates that as the value of predictors increases, the event hazard increases and thus the length of survival decreases. Put another way, a hazard ratio above 1 indicates a covariate that is positively associated with the event probability, and thus negatively associated with the length of survival.
  - `HR = 1`: No effect..the risk factor does not affect survival.
