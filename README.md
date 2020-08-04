@@ -124,7 +124,7 @@ KM method estimates the survival curve and yields the **KM-table**. The log-rank
 
 ## [Tool II] Basic Cox Proportional Hazards Model 
 The major theoretical development that this model provides is the ability to model **covariate effects in the presence of censored observations**. The **data** for this model, based on a sample of size `n`, consists of (![formula](https://render.githubusercontent.com/render/math?math=t_j,\delta_j,x_j)), j=1,2,..n where
- - ![formula](https://render.githubusercontent.com/render/math?math=t_j) is the time on study for the j-th individual
+ - ![formula](https://render.githubusercontent.com/render/math?math=t_j) is the possible event time on study for the j-th individual
  - ![formula](https://render.githubusercontent.com/render/math?math=\delta_j) is the event indicator(`1` if the event has occurred, `0` if the event has been censored).    
  
  - `hazard` refers to have the outcome of interest. The way the hazard changes over time is called the `hazard rate`. The thing is hazard function `λ(t)` is the probability of the event happening at time `t` given that it has not yet happened. Note that, in contrast to S(`t`) which focuses on **not having an event**, λ(`t`) focuses on the **event occurring**.
