@@ -129,7 +129,7 @@ The major theoretical development that this model provides is the ability to mod
  
  - `hazard` refers to have the outcome of interest. The way the hazard changes over time is called the `hazard rate`. The thing is hazard function `λ(t)` is the probability of the event happening at time `t` given that it has not yet happened. Note that, in contrast to S(`t`) which focuses on **not having an event**, λ(`t`) focuses on the **event occurring**.
  - Usually in survival analysis, we are interested in the difference between `survival curves`(S(t) vs t) of different groups of individuals.
- - 'proportional hazards' means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The two curves cannot be crossed! The proportionality of hazards is crucial and should be tested.. 
+ - `proportional hazards` means that the hazards assumed by the model is proportional! For example, the hazard pattern in young patients should be proportional to those whon are old...? The two curves cannot be crossed! The proportionality of hazards is crucial and should be tested.. 
 
 At the end of the day, `S(t)` and `λ(t)` together give the **Exponential Distribution** which the variable `t` follows. The Cox model allows us to examine how specified features influence the **`rate of a particular event happening: λ(t)`** at a particular point `t` in time. 
 <img src="https://user-images.githubusercontent.com/31917400/89272412-02191e00-d636-11ea-9ec0-3f12f2cd407d.jpg" /> 
