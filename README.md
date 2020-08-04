@@ -78,7 +78,7 @@ Why it's special? Why LM won't work?
 ## S(`t`): Probability that the duration is longer than `t`
 ## λ(`t`): Rate of particular event happening under observation at a time `t` (so far). 
 
-## [Tool I] Kaplan-Meier's Time-To-Event Table
+## [Tool I] Event time Analysis (Kaplan-Meier's Table)
 This table is used to measure the probability of event at a given time and the duration at varying times. The probability of event to time `t=0` is **1**, or **survival 100%**. This probability is technically known as the `survival rate`. Let’s now say that two people die the day after they are enrolled. The life table then looks like this:
    <img src="https://user-images.githubusercontent.com/31917400/88457347-807b0080-ce7d-11ea-9660-13ce029886b4.jpg" /> 
 
@@ -94,7 +94,6 @@ This table is used to measure the probability of event at a given time and the d
 
  - Note that we might have some drop outs. These data are censored and should be treated differently. When a data is missing at time `t`, it seems the subject was alive at time `t`, but we don't know whether the subject has died or survived....
  - But why use Kaplan-Meier? Why don't we just compute the simple cumulative distribution function and use 1−CDF as the estimate for the survivor curve? coz... we must think about `censoring`. Kaplan-Meier curves allow for this.
-
 
 __> Do you have predictors? Log-Rank test__
 KM method estimates the survival curve and yields the **KM-table**. The log-rank test compares the **survival time** by the given feature. 
@@ -115,14 +114,7 @@ KM method estimates the survival curve and yields the **KM-table**. The log-rank
   ```
 [Note] Kaplan-Meier method and log-rank tests explore the relation between one predictor and mortality variable over time but they can only manage **one predictor**. In contrast, `Cox proportional hazards model` can handle multiple predictors as a type of regression.  
 
-
-
-
-
-
-
-
-## [Tool II] Basic Cox Proportional Hazards Model 
+## [Tool II] Event Rate Analysis (Cox Proportional Hazards Model) 
 The major theoretical development that this model provides is the ability to model **covariate effects in the presence of censored observations**. The **data** for this model, based on a sample of size `n`, consists of (![formula](https://render.githubusercontent.com/render/math?math=t_j,\delta_j,x_j)), j=1,2,..n where
  - ![formula](https://render.githubusercontent.com/render/math?math=t_j) is the possible event time on study for the j-th individual
  - ![formula](https://render.githubusercontent.com/render/math?math=\delta_j) is the event indicator(`1` if the event has occurred, `0` if the event has been censored).    
@@ -142,7 +134,7 @@ When the regression coefficient is (+), or equivalently a hazard ratio(HR) great
  - `HR < 1`: then it means Reduction in the hazard...so the treatment is NICE!
  - `HR > 1`: then it means Increase in Hazard...so the treatment is fucked up.
 
-## [Tool III] Bayesian Cox Proportional Hazards Model
+## [Tool III] Bayesian Style Event time & rate Analysis
 yvjvv
 
 
