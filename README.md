@@ -135,7 +135,11 @@ When the regression coefficient is (+), or equivalently a hazard ratio(HR) great
  - `HR < 1`: then it means Reduction in the hazard...so the treatment is NICE!
  - `HR > 1`: then it means Increase in Hazard...so the treatment is fucked up.
 
-## [Tool III] Bayesian Style Event time & rate Analysis
+so...what's the COX prediction? Rate?
+<img src="https://user-images.githubusercontent.com/31917400/89591975-6ceb7480-d843-11ea-8770-5598a999181c.jpg" /> 
+
+
+## [Tool III] Bayesian Style Event time & rate Analysis: PGM-Cox model
 yvjvv
 
 
