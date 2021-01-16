@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/31917400/90052548-342f1d80-dcd1-11ea-8dae-ad0170e40d21.jpg" />
 
-# 00. Hierarchical Model
+# 00. {Hierarchical Model}
 We have assumed that all the observations were independent so far, but there is often a natural grouping to our data points which leads us to believe that some observation pairs should be more similar to each other than to others. For example, let's say a company plan to sample 150 test products for quality check, but they do 30 from your location and then 30 from 4 other factory locations(collecting 30 from each of 5 locations). We might expect a product from your location to be more similar to another product from your batch than to a product from another locations' batch. And we might be able to account for the likely differences between products in our Poisson model by making it a hierarchical model. That is, your lambda is not only estimated directly from your 30 products, but also indirectly from the other 120 products leveraging this hierarchical structure. Being able to account for relationships in the data while estimating everything with the single model is a primary advantage of using hierarchical models. And most Bayesian Models are hierarchical. 
 <img src="https://user-images.githubusercontent.com/31917400/48874302-7ff9af00-edea-11e8-835e-ff0b7ff2f098.jpg" />
 
@@ -77,7 +77,7 @@ Why it's special? Why LM won't work?
 
 # In short, we would be interested in something around the **event time `t`** and the **event rate `λ`**. 
  - ## S(`t`): Probability that the duration is longer than `t`
- - ## λ(`t`): Rate of particular event happening under observation at a time `t` (so far). 
+ - ## λ(`t`): Rate of particular event happening under observation at a time `t` 
 
 ----------------------------------------------------------------------------------------------------------------------
 ## [Tool I] Event time Analysis (Kaplan-Meier's Table)
@@ -162,7 +162,7 @@ yvjvv
     - __Multiple imputation__: Missing variables are assumed to be MAR (or MCAR) and are imputed by drawing from a distribution. This is done multiple times and yields multiple different completed datasets. Each of these datasets is analysed, and the results are combined into a single overall result. Multiple imputation has been shown to yield unbiased results for MAR or MCAR data. It can be done in R.
     - __Maximum likelihood__: This approach also gives unbiased results for MAR (or MCAR) data. Data are assumed to be normally distributed with a certain (multivariate) mean and variance. Observed data are used to compute the mean and variance, and missing data are drawn from the resulting normal distribution. We draw many times from the distribution until the mean and variance of the completed data are as close as they can get to that of the observed data. MNAR data need to be handled on a case-by-case basis. Basically, it’s more complicated.
 
-
+# 01. {Mixture Model}
 
 
 
