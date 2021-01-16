@@ -163,7 +163,7 @@ yvjvv
     - __Maximum likelihood__: This approach also gives unbiased results for MAR (or MCAR) data. Data are assumed to be normally distributed with a certain (multivariate) mean and variance. Observed data are used to compute the mean and variance, and missing data are drawn from the resulting normal distribution. We draw many times from the distribution until the mean and variance of the completed data are as close as they can get to that of the observed data. MNAR data need to be handled on a case-by-case basis. Basically, it’s more complicated.
 
 # 01. {Mixture Model}
-Mixture models are probability distributions that can account for a variety of features in the data including multi-modality and skewness. The idea of mixture models is to take multiple probability distributions and put them together, using a linear combination. 
+Mixture models are probability distributions that can account for a variety of features in the data including multi-modality and skewness. The idea of mixture models is to take multiple probability distributions and put them together, using a linear combination. While mixtures in which all components belong to the same family are the most common type of mixtures used in practice, nothing prevents you from defining a mixture model in which each component belongs to a different family of distributions.
 
 
 
