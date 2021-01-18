@@ -166,7 +166,7 @@ yvjvv
 Mixture models are probability distributions that can account for a variety of features in the data including multi-modality and skewness. The idea of mixture models is to take multiple probability distributions and put them together, using a linear combination. While mixtures in which all components belong to the same family are the most common type of mixtures used in practice, nothing prevents you from defining a mixture model in which each component belongs to a different family of distributions.
 <img src="https://user-images.githubusercontent.com/31917400/104812902-618e7300-57fd-11eb-8782-d9b54103d749.jpg" /> 
 
-If the `moment generating function` exists for each component exists, then the `MGF` of the mixture is simply a linear combination of the `mgf` of the components. This means if general local mgf is expressed as <img src="https://render.githubusercontent.com/render/math?math=E_{f}[e^\xt]=\int e^\xt f(x)dx ">, then the Global MGF is <img src="https://render.githubusercontent.com/render/math?math=M_{X}(t)=\sum_{k=1}^{K} w_{k}E_{G_{k}}[e^\xt]">
+If the `moment generating function` exists for each component exists, then the `MGF` of the mixture is simply a linear combination of the `mgf` of the components. This means if general local mgf is expressed as <img src="https://render.githubusercontent.com/render/math?math=E_{f}[e^\xt]=\int e^\xt f(x)dx ">, then the Global MGF is <img src="https://render.githubusercontent.com/render/math?math=M_{X}(t)=\sum_{k=1}^{K} w_{k}E_{G_{k}}[e^\xt]"> where <img src="https://render.githubusercontent.com/render/math?math=G_{k}= ">
 
 
 
